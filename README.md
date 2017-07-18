@@ -1,2 +1,3 @@
 # deep learning
-this archive primarily focuses on existing deep learning platform
+
+This archive primarily focuses on existing deep learning platforms from the perspective of compiling.
