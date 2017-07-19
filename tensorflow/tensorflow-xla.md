@@ -18,4 +18,5 @@ XLA currently supports JIT compilation on x86-64 and NVIDIA GPUs; and AOT compil
 
 ### Reference
 - [tensorflow xla](https://www.tensorflow.org/performance/xla/)
+- [tensorflow xla framework](https://www.tensorflow.org/versions/master/resources/xla_prerelease.html)
 - [google XLA - TensorFlow, compiled](https://developers.googleblog.com/2017/03/xla-tensorflow-compiled.html)
