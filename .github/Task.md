@@ -6,3 +6,4 @@
 - [ ] TODO: learn to write a simple assembler and linker, and try to modify the front-end of clang to support novel syntax feature.
 - [ ] TODO: learn the principle of hardware simulator, and find an open-source simulator, try to build & modify it.
 - [ ] TODO: document research result xla compilier(dealine weekends).
+- [ ] TODO: learn to write an llvm backend by this [link](http://llvm.org/docs/WritingAnLLVMBackend.html); learn gpgpu compiler by this [link](http://llvm.org/docs/CompileCudaWithLLVM.html) and read the source code of faster-rcnn.
