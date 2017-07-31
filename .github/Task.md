@@ -8,3 +8,4 @@
 - [ ] TODO: document research result xla compilier(dealine weekends).
 - [ ] TODO: learn to write an llvm backend by this [link](http://llvm.org/docs/WritingAnLLVMBackend.html); learn gpgpu compiler by this [link](http://llvm.org/docs/CompileCudaWithLLVM.html) and read the source code of faster-rcnn.
 - [ ] TODO: review code gen basic concepts
+- [ ] TODO: holiday tasks, get familiar with LLVM backend by transplanting instruction set of Cambricon; read the paper of Cambricon instruction set; read the source code of faster rcnn; tensorflow xla compilier document collection
