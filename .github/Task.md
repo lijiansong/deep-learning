@@ -9,3 +9,4 @@
 - [ ] TODO: learn to write an llvm backend by this [link](http://llvm.org/docs/WritingAnLLVMBackend.html); learn gpgpu compiler by this [link](http://llvm.org/docs/CompileCudaWithLLVM.html) and read the source code of faster-rcnn.
 - [x] TODO: review code gen basic concepts
 - [ ] TODO: spare some efforts to write a blog about tensorflow XLA compilier
+- [ ] TODO: `blog or document the basic conecpts of deep learning` in github
