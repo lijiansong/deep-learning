@@ -10,3 +10,4 @@
 - cuda docs, see official [site](https://docs.nvidia.com/)
 - book reading < virtual machine design and implementation in C/C++ >
 - [Understanding Convolution in Deep Learning](http://timdettmers.com/2015/03/26/convolution-deep-learning/)
+- Clang Internals, see [here](http://clang.llvm.org/docs/InternalsManual.html)
