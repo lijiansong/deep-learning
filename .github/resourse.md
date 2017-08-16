@@ -11,4 +11,4 @@
 - book reading < virtual machine design and implementation in C/C++ >
 - [Understanding Convolution in Deep Learning](http://timdettmers.com/2015/03/26/convolution-deep-learning/)
 - Clang Internals, see [here](http://clang.llvm.org/docs/InternalsManual.html)
-- Clang driver internals, see [here](http://clang.llvm.org/docs/DriverInternals.html) and LLVM IR details see [here](http://llvm.org/docs/LangRef.html)
+- Clang driver internals, see [here](http://clang.llvm.org/docs/DriverInternals.html) and LLVM IR details see [here](http://llvm.org/docs/LangRef.html), clang builtin function extensions, see [here](https://clang.llvm.org/docs/LanguageExtensions.html)
