@@ -12,3 +12,4 @@
 - [Understanding Convolution in Deep Learning](http://timdettmers.com/2015/03/26/convolution-deep-learning/)
 - Clang Internals, see [here](http://clang.llvm.org/docs/InternalsManual.html)
 - Clang driver internals, see [here](http://clang.llvm.org/docs/DriverInternals.html) and LLVM IR details see [here](http://llvm.org/docs/LangRef.html), clang builtin function extensions, see [here](https://clang.llvm.org/docs/LanguageExtensions.html)
+- follow this guide to build example target LEG, doc see [here](https://llvm.org/devmtg/2014-04/PDFs/Talks/Building%20an%20LLVM%20backend.pdf)
