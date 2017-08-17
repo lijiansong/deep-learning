@@ -10,6 +10,16 @@ The instruction set is categorized into 12 classes, namely CONFIG, COMPUT, IO, S
 ### LLVM backends
 为了设计一种方便开发者在IPU做开发的编程语言，如果利用LLVM来实现，就要修改clang前端（文法设计以及词法语法分析，这部分可以直接修改Clang来完成），同时开发一个后端来支持IPU平台。参考已有的Sparc、NVPTX平台，理解实现的基本原理。需要实现`instruction selection、 instruction scheduling、register allocation、code emission`等基本的过程。
 
+#### Basic Acknowledgement
+- GCC使用RTL(Register Transfer Language)描述后端处理器；
+- LLVM编译过程：
+  - 高级语言前端将源码转换成中间表示IR（Internal Representation）；
+  - LLVM中间代码优化器将前端生成的IR转换为优化过的IR。这一步中，中间代码优化器使用了独立于高级语言前端和LLVM后端的LLVM虚拟指令集，进行一系列的控制流、数据流等分析，收集的信息用于标量优化、循环优化及进程间优化等不同优化阶段；
+  - 代码生成器将优化后的LLVM IR转换为LLVM支持的后端处理器的汇编指令或者机器指令。
+- LLVM后端移植采用，目标静态描述使用tablegen描述目标处理器的后端寄存器、指令、调用约定等基本的属性；动态描述需要开发者手写相关的类来描述目标处理器复杂或者特殊操作
+- tablegen中```def AL : Register<"AL">, DwarfRegNum<[0, 0, 0]>;```定义中的`DwarfRegNum`用于调试
+- DAG target lowering即降级描述，DAG降级将LLVM虚拟指令从列表格式转换成DAG格式，分为LLVM自动降级和定制降级两种方式，定制降级由XXXTargetLowering根据转换机制处理目标平台不支持的指令
+
 ## Reference
 [1] Cambricon: An Instruction Set Architecture for Neural Networks</br>
 [2] Writing an LLVM Backend<br>
