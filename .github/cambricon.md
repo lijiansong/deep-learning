@@ -28,8 +28,13 @@ The instruction set is categorized into 12 classes, namely CONFIG, COMPUT, IO, S
 - tablegen中```def AL : Register<"AL">, DwarfRegNum<[0, 0, 0]>;```定义中的`DwarfRegNum`用于调试
 - DAG target lowering即降级描述，DAG降级将LLVM虚拟指令从列表格式转换成DAG格式，分为LLVM自动降级和定制降级两种方式，定制降级由XXXTargetLowering根据转换机制处理目标平台不支持的指令
 - 后端移植的基本过程：
-  - 
-
+  - 创建TargetMachine子类，描述目标机器的全局特征，e.g. IPUTargetMachine.h、IPUTargetMachine.cpp
+  - 描述目标机器的寄存器组，e.g.以XXXRegisterInfo.td文件为输入，利用tblgen来产生寄存器的定义，寄存器别名和寄存器类的C++代码，还需要为TargetRegisterInfo类的子类书写额外的代码，以描述用于进行寄存器分配的寄存器文件数据，同时也描述了寄存器之间的相互作用
+  - 描述目标的指令集，以目标机器专有的XXXInstrFormats.td和XXXInstrInfo.td为输入，利用tblgen生成对应的C++代码，还需要书写XXXInstrInfo类的代码来描述目标机器支持的机器指令
+  - 描述中间转换表示，即Target Lowering，该转换将LLVM IR从一个DAG的指令转换成目标机器专有指令的DAG。利用tblgen可以产生模式匹配的代码，并且根据目标专有的XXXInstrInfo.td文件中的附加信息来进行指令选择。还需要为XXXISelDAGToDAG.cpp书写代码，以根据模式匹配进行DAG-to-DAG指令选择；同时还需要在XXXISelLowering.cpp中coding以移除或者替代在SelectionDAG中不支持的操作和数据类型
+  - 为汇编输出器书写代码，即Code Emission。汇编输出器将LLVM IR转换成汇编格式，需要将汇编字符串加入到XXXInstrInfo.td里定义的指令中，还需要coding AsmPrinter.cpp的代码以完成LLVM to Assembly的转换
+  
+  
 ## Reference
 [1] Cambricon: An Instruction Set Architecture for Neural Networks</br>
 [2] Writing an LLVM Backend<br>
