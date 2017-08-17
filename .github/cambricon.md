@@ -19,9 +19,16 @@ The instruction set is categorized into 12 classes, namely CONFIG, COMPUT, IO, S
   - 代码生成器将优化后的LLVM IR转换为LLVM支持的后端处理器的汇编指令或者机器指令.
 - LLVM中间表示采用静态单赋值（SSA， Static Single Assignment）形式的IR，使用的指令集为LLVM虚拟指令集，其表示形式有三种：存在于内存的IR、存放在磁盘上的字节码(作为JIT在本地执行执行客户处理器代码的格式)、可供阅读的汇编代码
 - 后端移植的3个基本工具：llc、lli和tblgen。其中，llc用于从.bc 文件生成目标处理器的汇编代码；而对于支持LLVM的JIT编译器的目标处理器，lli可直接在本地运行目标处理器的.bc代码。tblgen用于将目标处理器的描述转化为相应的描述源代码文件，由此来简化后端目标处理器的移植工作，它要求用LLVM 定义的.td 格式文件来描述
+- 利用LLVM进行后端移植，开发者需要定义的接口包括`TargetMachine和TargetData分别描述目标机器的全局特性和数据结构特性`。此外，还有TargetLowering、TargetRegisterInfo、TargetInstrInfo、TargetFrameInfo、TargetSubtarget和TargetJITInfo等，分别用于描述目标处理器的`中间代码转换、寄存器、指令集、栈帧布局、处理器子系列支持和处理JIT支持等`。除了需要tablegen描述目标处理器，还要编写C++代码补充描述tablegen不能描述的目标处理器体系结构的特性。i.e.`开发者可以将大量简单但是工作量巨大的后端描述用复合tablegen语法的.td格式文件来描述，并用工具tblgen解析后生成与这些描述等价的C++代码，嵌入到手写的C++程序中`
+- tblgen也支持dag类型，可以表示嵌套有向图中的一个组成元素，可以利用`$ tblgen XXXTarget.td -gen-register-desc -o XXXGenRegisterInfo.inc`为td描述文件生成对应的C++描述文件，e.g.
+  - `$ tblgen XXXTarget.td -gen-register-desc -o XXXGenRegisterInfo.inc`寄存器描述
+  - `$ tblgen XXXTarget.td -gen-instr-desc -o XXXGenRegisterInfo.inc`指令集描述
+  - `$ tblgen XXXTarget.td -gen-callingconv-desc -o XXXGenRegisterInfo.inc`调用约束描述
 - LLVM后端移植采用，目标静态描述使用tblgen描述目标处理器的后端寄存器、指令、调用约定等基本的属性；动态描述需要开发者手写相关的类来描述目标处理器复杂或者特殊操作
 - tablegen中```def AL : Register<"AL">, DwarfRegNum<[0, 0, 0]>;```定义中的`DwarfRegNum`用于调试
 - DAG target lowering即降级描述，DAG降级将LLVM虚拟指令从列表格式转换成DAG格式，分为LLVM自动降级和定制降级两种方式，定制降级由XXXTargetLowering根据转换机制处理目标平台不支持的指令
+- 后端移植的基本过程：
+  - 
 
 ## Reference
 [1] Cambricon: An Instruction Set Architecture for Neural Networks</br>
