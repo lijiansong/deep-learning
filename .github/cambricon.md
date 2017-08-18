@@ -21,9 +21,9 @@ The instruction set is categorized into 12 classes, namely CONFIG, COMPUT, IO, S
 - 后端移植的3个基本工具：llc、lli和tblgen。其中，llc用于从.bc 文件生成目标处理器的汇编代码；而对于支持LLVM的JIT编译器的目标处理器，lli可直接在本地运行目标处理器的.bc代码。tblgen用于将目标处理器的描述转化为相应的描述源代码文件，由此来简化后端目标处理器的移植工作，它要求用LLVM 定义的.td 格式文件来描述
 - 利用LLVM进行后端移植，开发者需要定义的接口包括`TargetMachine和TargetData分别描述目标机器的全局特性和数据结构特性`。此外，还有TargetLowering、TargetRegisterInfo、TargetInstrInfo、TargetFrameInfo、TargetSubtarget和TargetJITInfo等，分别用于描述目标处理器的`中间代码转换、寄存器、指令集、栈帧布局、处理器子系列支持和处理JIT支持等`。除了需要tablegen描述目标处理器，还要编写C++代码补充描述tablegen不能描述的目标处理器体系结构的特性。i.e.`开发者可以将大量简单但是工作量巨大的后端描述用复合tablegen语法的.td格式文件来描述，并用工具tblgen解析后生成与这些描述等价的C++代码，嵌入到手写的C++程序中`
 - tblgen也支持dag类型，可以表示嵌套有向图中的一个组成元素，可以利用`$ tblgen XXXTarget.td -gen-register-desc -o XXXGenRegisterInfo.inc`为td描述文件生成对应的C++描述文件，e.g.
-  - `$ tblgen XXXTarget.td -gen-register-desc -o XXXGenRegisterInfo.inc`寄存器描述
-  - `$ tblgen XXXTarget.td -gen-instr-desc -o XXXGenRegisterInfo.inc`指令集描述
-  - `$ tblgen XXXTarget.td -gen-callingconv-desc -o XXXGenRegisterInfo.inc`调用约束描述
+  - `$ llvm-tblgen XXXTarget.td -gen-register-desc -o XXXGenRegisterInfo.inc`寄存器描述
+  - `$ llvm-tblgen XXXTarget.td -gen-instr-desc -o XXXGenRegisterInfo.inc`指令集描述
+  - `$ llvm-tblgen XXXTarget.td -gen-callingconv-desc -o XXXGenRegisterInfo.inc`调用约束描述
 - LLVM后端移植采用，目标静态描述使用tblgen描述目标处理器的后端寄存器、指令、调用约定等基本的属性；动态描述需要开发者手写相关的类来描述目标处理器复杂或者特殊操作
 - tablegen中```def AL : Register<"AL">, DwarfRegNum<[0, 0, 0]>;```定义中的`DwarfRegNum`用于调试
 - DAG target lowering即降级描述，DAG降级将LLVM虚拟指令从列表格式转换成DAG格式，分为LLVM自动降级和定制降级两种方式，定制降级由XXXTargetLowering根据转换机制处理目标平台不支持的指令
@@ -31,8 +31,8 @@ The instruction set is categorized into 12 classes, namely CONFIG, COMPUT, IO, S
   - 创建TargetMachine子类，描述目标机器的全局特征，e.g. IPUTargetMachine.h、IPUTargetMachine.cpp
   - 描述目标机器的寄存器组，e.g.以XXXRegisterInfo.td文件为输入，利用tblgen来产生寄存器的定义，寄存器别名和寄存器类的C++代码，还需要为TargetRegisterInfo类的子类书写额外的代码，以描述用于进行寄存器分配的寄存器文件数据，同时也描述了寄存器之间的相互作用
   - 描述目标的指令集，以目标机器专有的XXXInstrFormats.td和XXXInstrInfo.td为输入，利用tblgen生成对应的C++代码，还需要书写XXXInstrInfo类的代码来描述目标机器支持的机器指令
-  - 描述中间转换表示，即Target Lowering，该转换将LLVM IR从一个DAG的指令转换成目标机器专有指令的DAG。利用tblgen可以产生模式匹配的代码，并且根据目标专有的XXXInstrInfo.td文件中的附加信息来进行指令选择。还需要为XXXISelDAGToDAG.cpp书写代码，以根据模式匹配进行DAG-to-DAG指令选择；同时还需要在XXXISelLowering.cpp中coding以移除或者替代在SelectionDAG中不支持的操作和数据类型
-  - 为汇编输出器书写代码，即Code Emission。汇编输出器将LLVM IR转换成汇编格式，需要将汇编字符串加入到XXXInstrInfo.td里定义的指令中，还需要coding AsmPrinter.cpp的代码以完成LLVM to Assembly的转换
+  - 描述中间转换表示，该转换将LLVM IR从一个DAG的指令转换成目标机器专有指令的DAG。利用tblgen可以产生模式匹配的代码，并且根据目标专有的XXXInstrInfo.td文件中的附加信息来进行指令选择。还需要为XXXISelDAGToDAG.cpp书写代码，以根据模式匹配进行DAG-to-DAG指令选择；同时还需要在XXXISelLowering.cpp中coding以移除或者替代在SelectionDAG中不支持的操作和数据类型
+  - 为汇编输出器书写代码，汇编输出器将LLVM IR转换成汇编格式，需要将汇编字符串加入到XXXInstrInfo.td里定义的指令中，还需要coding AsmPrinter.cpp的代码以完成LLVM to Assembly的转换
   
   
 ## Reference
