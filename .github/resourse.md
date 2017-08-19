@@ -15,3 +15,4 @@
 - follow this guide to build example target LEG, doc see [here](https://llvm.org/devmtg/2014-04/PDFs/Talks/Building%20an%20LLVM%20backend.pdf)
 - what is ABI, see [here](http://www.princeton.edu/~achaney/tmve/wiki100k/docs/Application_binary_interface.html)
 - GAS-format assembly language, abt GAS see [here](http://asm.sourceforge.net/howto/gas.html)
+- [Life of an instruction in LLVM](http://eli.thegreenplace.net/2012/11/24/life-of-an-instruction-in-llvm/)
