@@ -33,6 +33,12 @@ The instruction set is categorized into 12 classes, namely CONFIG, COMPUT, IO, S
   - 描述目标的指令集，以目标机器专有的XXXInstrFormats.td和XXXInstrInfo.td为输入，利用tblgen生成对应的C++代码，还需要书写XXXInstrInfo类的代码来描述目标机器支持的机器指令
   - 描述中间转换表示，该转换将LLVM IR从一个DAG的指令转换成目标机器专有指令的DAG。利用tblgen可以产生模式匹配的代码，并且根据目标专有的XXXInstrInfo.td文件中的附加信息来进行指令选择。还需要为XXXISelDAGToDAG.cpp书写代码，以根据模式匹配进行DAG-to-DAG指令选择；同时还需要在XXXISelLowering.cpp中coding以移除或者替代在SelectionDAG中不支持的操作和数据类型
   - 为汇编输出器书写代码，汇编输出器将LLVM IR转换成汇编格式，需要将汇编字符串加入到XXXInstrInfo.td里定义的指令中，还需要coding AsmPrinter.cpp的代码以完成LLVM to Assembly的转换
+- test steps(如果是我来开发的话，我会这么做):
+  - 利用LLVM的前端工具将test.ipu编译为LLVM的中间结果test.bc，`$ clang -O3 -emit-llvm test.ipu -c -o test.bc`
+  - 利用后端工具llc将test.bc编译为XXX目标平台的汇编，`$ llc -march=xxx test.bc -o test.s`
+  - 生成汇编后，为了验证后端生成的汇编是否正确，有两种方式：
+    - 一种是对照XXX目标平台的指令集，验证汇编代码的正确性；
+    - 另一种是如果目标平台有自己的交叉编译器，可以将test.bc编译成XXX目标平台可以执行的二进制可执行文件，将该可执行文件放到目标平台上执行，直接比对程序运行结果是否正确即可.
   
   
 ## Reference
