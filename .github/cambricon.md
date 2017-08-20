@@ -39,7 +39,8 @@ The instruction set is categorized into 12 classes, namely CONFIG, COMPUT, IO, S
   - 生成汇编后，为了验证后端生成的汇编是否正确，有两种方式：
     - 一种是对照XXX目标平台的指令集，验证汇编代码的正确性；
     - 另一种是如果目标平台有自己的交叉编译器，可以将test.bc编译成XXX目标平台可以执行的二进制可执行文件，将该可执行文件放到目标平台上执行，直接比对程序运行结果是否正确即可.
-  
+- pipeline structure of llvm backend:
+    - IR -> SelectionDAG -> MachineDAG -> MachineInstr -> MCInst  
   
 ## Reference
 [1] Cambricon: An Instruction Set Architecture for Neural Networks</br>
