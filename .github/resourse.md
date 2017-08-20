@@ -17,4 +17,4 @@
 - GAS-format assembly language, abt GAS see [here](http://asm.sourceforge.net/howto/gas.html)
 - [Life of an instruction in LLVM](http://eli.thegreenplace.net/2012/11/24/life-of-an-instruction-in-llvm/)
 - [The LLVM Target-Independent Code Generator](http://llvm.org/docs/CodeGenerator.html)
-- [LLVM for OpenRISC: Euro-LLVM 2012 workshop by Anton ](http://opencores.org/forum,OpenRISC,0,4819)
+- [LLVM for OpenRISC: Euro-LLVM 2012 workshop by Anton ](http://opencores.org/forum,OpenRISC,0,4819) and the [llvm dev meeting](http://llvm.org/devmtg/2012-04-12/)
