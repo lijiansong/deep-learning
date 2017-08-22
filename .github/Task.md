@@ -11,3 +11,4 @@
 - [ ] TODO: spare some efforts to write a blog about tensorflow XLA compilier
 - [ ] TODO: `blog or document the basic conecpts of deep learning` in github
 - [ ] TODO: research mxnet compiler tvm
+- [ ] TODO: 争取毕业之前能够以演讲者的身份参加一次LLVM开发者大会，男人，加油！
