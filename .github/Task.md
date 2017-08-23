@@ -6,7 +6,9 @@
 - [ ] TODO: learn to write a simple assembler and linker, and try to modify the front-end of clang to support novel syntax feature.
 - [x] TODO: learn the principle of hardware simulator, and find an open-source simulator, try to build & modify it.
 - [ ] TODO: document research result xla compilier(dealine weekends).
-- [ ] TODO: learn to write an llvm backend by this [link](http://llvm.org/docs/WritingAnLLVMBackend.html); learn gpgpu compiler by this [link](http://llvm.org/docs/CompileCudaWithLLVM.html) and read the source code of faster-rcnn.
+- [x] TODO: learn to write an llvm backend by this [link](http://llvm.org/docs/WritingAnLLVMBackend.html); learn gpgpu compiler by this [link](http://llvm.org/docs/CompileCudaWithLLVM.html) and read the source code of faster-rcnn.
 - [x] TODO: review code gen basic concepts
 - [ ] TODO: spare some efforts to write a blog about tensorflow XLA compilier
 - [ ] TODO: `blog or document the basic conecpts of deep learning` in github
+- [ ] TODO: research mxnet compiler tvm
+- [ ] TODO: 争取毕业之前能够以演讲者的身份参加一次LLVM开发者大会，男人，加油！
