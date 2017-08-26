@@ -14,3 +14,4 @@
 - [ ] TODO: 争取毕业之前能够以演讲者的身份参加一次LLVM开发者大会，男人，加油！
 - [x] TODO: write built in functions for IO
 - [ ] TODO: write built-in functions for scalar
+- [ ] TODO: grap the architecture of clang and jit
