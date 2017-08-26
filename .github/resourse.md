@@ -20,3 +20,4 @@
 - [LLVM for OpenRISC: Euro-LLVM 2012 workshop by Anton ](http://opencores.org/forum,OpenRISC,0,4819) and the [llvm dev meeting](http://llvm.org/devmtg/2012-04-12/)
 - backup [NNVM](http://tqchen.github.io/2016/10/01/build-your-own-tensorflow-with-nnvm-and-torch.html)
 - llvm tools [page](http://llvm.org/docs/CommandGuide/) and [llvm-lit](https://llvm.org/docs/CommandGuide/lit.html)
+- llvm backend---about function call, see this [page](https://jonathan2251.github.io/lbd/funccall.html)
