@@ -15,4 +15,4 @@
 - [x] TODO: write built in functions for IO
 - [x] TODO: write built-in functions for scalar
 - [ ] TODO: grap the architecture of clang and jit
-- [ ] TODO: understand the basic principle of llvm SelectionDAG
+- [ ] TODO: understand the basic principle of llvm SelectionDAG, basic algorithm see book <Modern Compiler Implementation in C>
