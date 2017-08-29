@@ -23,4 +23,4 @@
 - [ ] llvm backend---about function call, see this [page](https://jonathan2251.github.io/lbd/funccall.html)
 - [ ] [Global Instruction Selection in LLVM](https://2pi.dk/llvm/global-isel)
 - [ ] FileChecking tool, see this [page](https://github.com/lijiansong/llvm/blob/master/docs/CommandGuide/FileCheck.rst)
-- mxnet tvm compilier tutorial, see this [page](http://docs.tvmlang.org/index.html)
+- mxnet tvm compilier tutorial, see this [page](http://docs.tvmlang.org/index.html) and tvm news see this [page](http://tvmlang.org/)
