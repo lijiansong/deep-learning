@@ -24,3 +24,4 @@
 - [ ] [Global Instruction Selection in LLVM](https://2pi.dk/llvm/global-isel)
 - [ ] FileChecking tool, see this [page](https://github.com/lijiansong/llvm/blob/master/docs/CommandGuide/FileCheck.rst)
 - mxnet tvm compilier tutorial, see this [page](http://docs.tvmlang.org/index.html) and tvm news see this [page](http://tvmlang.org/)
+- cuda nvcc compiler driver, see this [page](http://docs.nvidia.com/cuda/cuda-compiler-driver-nvcc/index.html#axzz4riJBNyQD)
