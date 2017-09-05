@@ -17,4 +17,5 @@
 - [ ] TODO: grap the architecture of clang and jit
 - [ ] TODO: understand the basic principle of llvm SelectionDAG, basic algorithm see book <Modern Compiler Implementation in C>
 - [x] TODO: read gpucc paper 
-- [ ] TODO: compare cuda's programming model with opencl and know the difference, read opencl paper
+- [x] TODO: compare cuda's programming model with opencl and know the difference, read opencl paper
+- [ ] TODO: paper read, <CUDA: Compiling and Optimizing for a GPU Platform> and grep cuda compile pipeline of official site
