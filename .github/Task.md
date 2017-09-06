@@ -19,3 +19,6 @@
 - [x] TODO: read gpucc paper 
 - [x] TODO: compare cuda's programming model with opencl and know the difference, read opencl paper
 - [ ] TODO: paper read, <CUDA: Compiling and Optimizing for a GPU Platform> and grep cuda compile pipeline of official site
+- [ ] BackUp: 刚刚有一兄弟跟我说，他导师认为博士应该这么读，14×7，即一周每天都至少花14个小时在科研上，现在细细想来，或许有些道理。博士期间要想真正地有产出，时间的投入肯定少不了，每周每天至少14个小时意味着除去吃饭和睡觉的10个小时，这10个小时是这么分配的，吃饭2个小时（含早中晚，好像也算合理），睡觉8个小时（晚上12点睡觉，早上8点起来，也算合理，不影响第二天的工作效率）。我结合自己又细细想来，在怀柔的一年除了技术栈的堆积，好像也没啥产出，因为自己本来就没有做到14×7。目前已经研二，我又细细想了一下，自己博士期间应该做不到，因为我周末的上午都是在补觉，下午才去做专业相关的东西。做科研的大抵分为四类人：第一类，每周每天的投入少于14个小时，产出也一般，这一类一般是入门级的，有很大的提升空间，需要后天的加强；第二类，每周每天也确实做到了14×7，但是产出一般，实际获得的东西大打折扣，这一类可以认为是资质平庸；第二类，每周每天也确实做到了14×7，也有超越常人的产出，这一类人属于中上的水平吧；还有一类，每天实际只投入了8个小时，但是产出跟第三类14个小时几乎相当甚至超越，这一类人就是所谓的“大牛，屌人”。《记20170906瞎扯》
+- [ ] TODO: spare some efforts to implement a toy programming language by clang and llvm, mainly focus on the backend
+
