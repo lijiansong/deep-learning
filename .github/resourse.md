@@ -26,3 +26,4 @@
 - mxnet tvm compilier tutorial, see this [page](http://docs.tvmlang.org/index.html) and tvm news see this [page](http://tvmlang.org/)
 - cuda nvcc compiler driver, see this [page](http://docs.nvidia.com/cuda/cuda-compiler-driver-nvcc/index.html#axzz4riJBNyQD)
 - cuda nvvm details see this [page](http://on-demand.gputechconf.com/gtc/2013/presentations/S3185-Building-GPU-Compilers-libNVVM.pdf)
+- cuda NVVM IR samples see this [page](https://github.com/nvidia-compiler-sdk/nvvmir-samples)
