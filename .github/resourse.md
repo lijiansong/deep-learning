@@ -25,3 +25,6 @@
 - [ ] FileChecking tool, see this [page](https://github.com/lijiansong/llvm/blob/master/docs/CommandGuide/FileCheck.rst)
 - mxnet tvm compilier tutorial, see this [page](http://docs.tvmlang.org/index.html) and tvm news see this [page](http://tvmlang.org/)
 - cuda nvcc compiler driver, see this [page](http://docs.nvidia.com/cuda/cuda-compiler-driver-nvcc/index.html#axzz4riJBNyQD)
+- cuda nvvm details see this [page](http://on-demand.gputechconf.com/gtc/2013/presentations/S3185-Building-GPU-Compilers-libNVVM.pdf)
+- cuda NVVM IR samples see this [page](https://github.com/nvidia-compiler-sdk/nvvmir-samples)
+- position independent code, see this [blog](http://eli.thegreenplace.net/2011/11/03/position-independent-code-pic-in-shared-libraries/)
