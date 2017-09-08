@@ -43,7 +43,7 @@ The instruction set is categorized into 12 classes, namely CONFIG, COMPUT, IO, S
     - IR -> SelectionDAG -> MachineDAG -> MachineInstr -> MCInst  
 
 ## Tool Chain Architecture
-The whole toolchains contain device-end compiler, device-end assembler and host-end linker
+The whole toolchains contain device-end compiler, device-end assembler and host-end linker. Besides we also need a native lib like cudnn so that developers can easily write the IPU kernel functions. Moreover, a wrapper is in need so that we can translate the binary machine code into x86-formated object code, and we can insert it into the host-end x86 object code. Lastly, we need a host-end lib that can integrate with the already existing lib.
   
 ## Reference
 [1] Cambricon: An Instruction Set Architecture for Neural Networks</br>
