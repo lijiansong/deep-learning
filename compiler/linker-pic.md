@@ -1,19 +1,26 @@
 ## PIC (Position Independent Code)
+- The idea behind PIC is simple - add an additional level of indirection to all global data and function references in the code. By cleverly utilizing some artifacts of the linking and loading processes, it is possible to make the text section of the shared library truly position independent, in the sense that it can be easily mapped into different memory addresses without needing to change one bit.
+- One immediately apparent cost is the extra indirection required for all external references to data and code in PIC. That is an extra memory load for each reference to a global variable, and for each call to a function. How problematic this is in practice depends on the compiler, the CPU architecture and the particular application.
+- Another, less apparent cost, is the increased register usage required to implement PIC. In order to avoid locating the GOT too frequently, it makes sense for the compiler to generate code that keeps its address in a register (usually ebx). But that ties down a whole register just for the sake of GOT. While not a big problem for RISC architectures that tend to have a lot of general purposes registers, it presents a performance problem for architectures like x86, which has a small amount of registers. PIC means having one general purpose register less, which adds up indirect costs since now more memory references have to be made.
 - If we have one program which is PIC, we can add this program to any other program, without fear that it might not work - because the PIC program has everything it needs internally.
-- PIC is the code which does not need to be changed  regardless of the address in which it is loaded; Enable loading the same program at different addresses: shared libraries or dynamic loading. e.g., relative jumps, reference to activation records. Its main idea: `Keep the data in a table, Use register to point to the beginning of the table, Refer to all data relative to the designated register`. To set the register, two examples:
+- PIC is the code which does not need to be changed regardless of the address in which it is loaded; Enable loading the same program at different addresses: shared libraries or dynamic loading. e.g., relative jumps, reference to activation records. Its main idea: `Keep the data in a table, Use register to point to the beginning of the table, Refer to all data relative to the designated register`. To set the register, two examples:
   - Per-Routine Pointer Table, Store the pointer to the routine in the table: for caller, Load Pointer table address into RP, Load Code address from 0(RP) into RC, call via RC; for callee, RP points to pointer table, Table has addresses of pointer table for subprocedures.
   - ELF-Position Independent Code, Executable consists of code followed by data, The offset of the data from the beginning of the code is known at compile-time
-- If the load address for a program is not fixed (e.g., shared libraries), we use position independent code. Its basic idea is that `separate code from data; generate code that doesn’t depend on where it is loaded.` PC-relative addressing can give position-independent code references. This may not be enough, e.g.: data references, instruction peculiarities (e.g., call instruction in Intel x86) may not permit the use of PC-relative addressing. 
+- If the load address for a program is `not fixed` (e.g., shared libraries), we use position independent code. Its basic idea is that `separate code from data; generate code that doesn’t depend on where it is loaded.` PC-relative addressing can give position-independent code references. This may not be enough, e.g.: data references, instruction peculiarities (e.g., call instruction in Intel x86) may not permit the use of PC-relative addressing. 
 - For ELF files, PIC is like this. It has the following characteristics: 
   - data pages follow code pages;
   - the offset from the code to the data does not depend on where the program is loaded.
   - Besides, the linker creates a global offset table (GOT) that contains offsets to all global data used. 
   - If a program can load its own address into a register, it can then use a fixed offset to access the GOT, and thence the data.
-- For example, Code to figure out its own address (x86):
+- The above is only useful if we can actually put the relative offset to work. But data references (i.e. in the mov instruction) on x86 require `absolute addresses`. So, what can we do? If we have a relative address and need an absolute address, what is missing is the value of the instruction pointer (since, by definition, the relative address is relative to the instruction's location). There is no instruction to obtain the value of the instruction pointer on x86, but we can use a simple trick to get it. For example, Code to figure out its own address (x86):
 ```
     call  L   /* push address of next instruction on stack */
     L: pop %ebx  /* pop address of this instruction into %ebx */
 ```
+What happens here is:
+- The CPU executes `call L`, which causes it to save the address of the next instruction (the `pop %ebx`) on stack and jump to the label.
+- Since the instruction at the label is `pop %ebx`, it gets executed next. It pops a value from the stack into %ebx. But this value is the address of the instruction itself, so %ebx now effectively contains the value of the instruction pointer.
+
 Accessing a global variable x in PIC:
   - GOT has an entry, say at position k, for x.  The dynamic linker fills in the address of x into this entry at load time.
   - Compute “my address” into a register, say %ebx (above);
@@ -59,7 +66,7 @@ Accessing a global variable x in PIC:
 
 ## Linker
 - Recap, Assembler generates binary code: Unresolved addresses, Relocatable addresses, while Linker generates executable code, Loader generates runtime states (images)
-- For compilation and assembly, it will translate the source code to machine language. However, the result may still not be suitable for execution, because of unresolved references to external and library routines. During the linking stage, the linker will bring together the binaries of separately compiled modules and search libraries and resolve external references. While the loader will bring an object program into memory for execution, such as allocate memory, initialize environment, maybe fix up addresses.
+- `For compilation and assembly, it will translate the source code to machine language. However, the result may still not be suitable for execution, because of unresolved references to external and library routines. During the linking stage, the linker will bring together the binaries of separately compiled modules and search libraries and resolve external references. While the loader will bring an object program into memory for execution, such as allocate memory, initialize environment, maybe fix up addresses.`
 - Contents of an object file contain:
   - header infomation which is the overall information about the file and its contents.
   - Object code and data
@@ -88,3 +95,7 @@ Accessing a global variable x in PIC:
 ## REFERENCE
 - CSc453 Linking and Loading
 - Linkers & Loaders
+- wikipedia, position independent code, [page](https://en.wikipedia.org/wiki/Position-independent_code)
+- linux die, [page](https://linux.die.net/)
+- Eli Bendersky's [blog](http://eli.thegreenplace.net/2011/11/03/position-independent-code-pic-in-shared-libraries/)
+- main is usually a function, [PAGE](https://mainisusuallyafunction.blogspot.com)
