@@ -99,3 +99,6 @@ Accessing a global variable x in PIC:
 - linux die, [page](https://linux.die.net/)
 - Eli Bendersky's [blog](http://eli.thegreenplace.net/2011/11/03/position-independent-code-pic-in-shared-libraries/)
 - main is usually a function, [PAGE](https://mainisusuallyafunction.blogspot.com)
+
+
+
