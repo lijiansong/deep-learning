@@ -23,4 +23,5 @@
 - [x] TODO: research pic (short for Position Independent Code) in llvm, and know how to implement it? what is the constraint?
 - [ ] TODO: for CUDA, its data type does well compatibility with x86, how does CUDA make it?
 - [ ] TODO: for more info about NVVM IR, check its sdk tutorial <NVVM_IR_Specification.pdf> and <PTX_Writers_Guide_To_Interoperability.pdf> in the dir <$CUDA_HOME/doc/pdf>
-- [ ] TODO: for more info about float point on NVIDIA GPU, check out its tutorial <Floating_Point_on_NVIDIA_GPU.pdf> 
+- [ ] TODO: for more info about float point on NVIDIA GPU, check out its tutorial <Floating_Point_on_NVIDIA_GPU.pdf>
+- [ ] TODO: in $CUDA_HOME/nvvm/libnvvm-samples, contains the samples of nvvm, check out for the IR and dump it and the ptx files
