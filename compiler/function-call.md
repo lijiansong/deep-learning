@@ -76,7 +76,8 @@ main:
 而Epilogue的功能与Prologue的功能恰恰相反，其主要操作包括：
 - 将栈指针rsp指向当前子函数栈帧的frame pointer，即指向当前栈帧的栈底，而这个位置恰好是Prelogue保存的主调函数的frame pointer。然后通过pop将主调函数的frame pointer弹出到rbp中。这样，一方面释放了被调用函数的foo_func的栈帧，同时也回到了主调用函数main的栈帧中。
 - 将调用子函数的call指令压栈的返回地址从栈顶pop到EIP中，并跳转到EIP处继续执行，这样CPU就返回到主调函数中继续执行，这个操作由ret指令来完成。
-剩下的5/6两行的代码就是为了完成a+4的功能。`movl  -4(%rbp), %eax`取出参数a的值放入寄存器eax中，然后下一条addl指令将其加4
+
+剩下的5/6两行的代码就是为了完成a+4的功能。`movl  -4(%rbp), %eax`取出参数a的值放入寄存器eax中，然后下一条addl指令将其加4。代码中局部变量相对于栈的frame pointer（保存在rbp中）的偏移可以用来访问局部变量，e.g. -4(%rbp)就表参数a.
 
 
 ### REF
