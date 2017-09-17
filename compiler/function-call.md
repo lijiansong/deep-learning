@@ -81,5 +81,5 @@ main:
 
 
 ### REF
-- <Deep Explore Linux OS>
+- < Deep Explore Linux OS >
 - IA32 Registers vs x86-64 Registers, checkout this [PAGE](http://www.cnblogs.com/broglie/p/5538151.html)
