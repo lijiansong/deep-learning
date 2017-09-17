@@ -26,4 +26,5 @@
 - [ ] TODO: for more info about float point on NVIDIA GPU, check out its tutorial <Floating_Point_on_NVIDIA_GPU.pdf>
 - [ ] TODO: in $CUDA_HOME/nvvm/libnvvm-samples, contains the samples of nvvm, check out for the IR and dump it and the ptx files
 - [ ] TODO: research CUDA wrapper, grap its input and output format
-
+- [ ] TODO: follow this guide to implement function call, checkout this [page](https://jonathan2251.github.io/lbd/funccall.html)
+ 
