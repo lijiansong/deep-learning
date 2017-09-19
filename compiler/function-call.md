@@ -72,7 +72,7 @@ main:
 在上述汇编片段中，在函数的开头和结尾分别插入一小段代码，分别称为Prologue和Epilogue，e.g.,上述片段中，第2/3/4行是Prologue，第7/8行是Epilogue。Prologue用于保存主调函数的frame pointer,主要是为了在子函数调用结束后，恢复主调函数的栈帧，同时为子函数准本栈帧。如上述代码所示，其主要操作包括：
 - 保存主调函数的frame pointer，即第2行汇编指令，就是将保存在rbp寄存器中的frame pointer压栈，以便于在退出子函数时可以从栈中恢复主调函数的frame pointer;
 - 将rsp赋给rbp，即将子函数的frame pointer指向主调函数的栈顶，这行代码的意义就是记录了子函数的栈帧的底部，从这里就开始了子函数的栈帧
-- 修改栈顶指针,为子函数的本地变量分配栈空间
+- 修改栈顶指针,为子函数的本地变量分配栈空间, `movl  %edi, -4(%rbp)`中寄存器%edi放的是参数的值，将参数的值存起来，`-4(%rbp)`就是为了存放地一个参数
 而Epilogue的功能与Prologue的功能恰恰相反，其主要操作包括：
 - 将栈指针rsp指向当前子函数栈帧的frame pointer，即指向当前栈帧的栈底，而这个位置恰好是Prelogue保存的主调函数的frame pointer。然后通过pop将主调函数的frame pointer弹出到rbp中。这样，一方面释放了被调用函数的foo_func的栈帧，同时也回到了主调用函数main的栈帧中。
 - 将调用子函数的call指令压栈的返回地址从栈顶pop到EIP中，并跳转到EIP处继续执行，这样CPU就返回到主调函数中继续执行，这个操作由ret指令来完成。
