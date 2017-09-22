@@ -27,4 +27,6 @@
 - [ ] TODO: in $CUDA_HOME/nvvm/libnvvm-samples, contains the samples of nvvm, check out for the IR and dump it and the ptx files
 - [ ] TODO: research CUDA wrapper, grap its input and output format
 - [ ] TODO: follow this guide to implement function call, checkout this [page](https://jonathan2251.github.io/lbd/funccall.html)
+- [ ] TODO: two things，one is to compute the raw on the dev instead of simulator，another is to get tf connect with llvm backend by the ir and know how to dump it
+
  
