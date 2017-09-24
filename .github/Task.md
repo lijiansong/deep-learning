@@ -28,5 +28,5 @@
 - [ ] TODO: research CUDA wrapper, grap its input and output format
 - [ ] TODO: follow this guide to implement function call, checkout this [page](https://jonathan2251.github.io/lbd/funccall.html)
 - [ ] TODO: two things，one is to compute the raw on the dev instead of simulator，another is to get tf connect with llvm backend by the ir and know how to dump it
-
+- [ ] TODO: analysize the function call of leg, and consider how to implement it on Cambricon
  
