@@ -6,6 +6,7 @@
 #include <cstring>
 #include <string>
 using std::string;
+using std::ifstream;
 typedef enum
 {
     DATA_FOR_DDR,

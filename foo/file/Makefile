@@ -1,6 +1,9 @@
-TARGET=main
+PROJECT=main
+SRC_DIR?=$(PWD)
+CC = g++ -g
+SOURCES=$(SRC_DIR)/main.cc utils.cc
 all:
-	g++ $(TARGET).cc -o $(TARGET)
+	$(CC) $(SOURCES) -o $(PROJECT)
 clean:
-	rm -f $(TARGET) *.txt
+	rm -f $(PROJECT) *.txt
 

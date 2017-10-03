@@ -27,7 +27,8 @@ void transform_into_byte(const string fin_name, unsigned char *buf, const int bu
         for(int i=0; i<buf_len; ++i)
         {
             fscanf(fp,"%02x", &tmp);
-            *(buf + i/8*8+7 - i%7) = tmp;
+            printf("%d: %02x ", i/8*8+7 - i%8, tmp);
+            *(buf + i/8*8+7 - i%8) = (unsigned char)tmp;
         }
     }
     else if(type==ONCHIP)
@@ -35,7 +36,8 @@ void transform_into_byte(const string fin_name, unsigned char *buf, const int bu
         for(int i=0; i<buf_len; ++i)
         {
             fscanf(fp,"%02x", &tmp);
-            *(buf + i/64*64+63 - i%63) = tmp;
+            printf("%d: %02x ", i/64*64+63 - i%64, tmp);
+            *(buf + i/64*64+63 - i%64) = (unsigned char)tmp;
         }
     }
 
