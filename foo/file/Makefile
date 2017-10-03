@@ -1,6 +1,6 @@
-TARGET=file
+TARGET=main
 all:
-	gcc $(TARGET).cc -o $(TARGET)
+	g++ $(TARGET).cc -o $(TARGET)
 clean:
 	rm -f $(TARGET) *.txt
 
