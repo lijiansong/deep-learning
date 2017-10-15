@@ -7,7 +7,8 @@ SOURCES = $(SRC_DIR)/main.cc \
 INCLUDES = $(SRC_DIR)/include
 
 all:
+	@echo compiling $(SOURCES)
 	$(CC) -I $(INCLUDES) $(SOURCES) -o $(PROJECT)
 clean:
-	rm -f $(PROJECT) *.txt
+	@rm -f $(PROJECT) *.txt
 
