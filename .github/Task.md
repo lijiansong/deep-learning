@@ -3,12 +3,12 @@
 - [x] TODO: research faster-rcnn, pay attention to its algorithm (deadline 07/21)
 - [x] TODO: build clang & llvm on cambricon server and learn to write a backend for a novel hardware(deadline 07/20)
 - [ ] TODO: find out research direction `deep learning programming language or compilier system`, focus on deep learning from the perspective of compilation tech, not deep learning platform e.g. tensorflow, caffe, pytorch and etc (dealine weekends).
-- [ ] TODO: learn to write a simple assembler and linker, and try to modify the front-end of clang to support novel syntax feature.
+- [x] TODO: learn to write a simple assembler and linker, and try to modify the front-end of clang to support novel syntax feature.
 - [x] TODO: learn the principle of hardware simulator, and find an open-source simulator, try to build & modify it.
-- [ ] TODO: document research result xla compilier(dealine weekends).
+- [x] TODO: document research result xla compilier(dealine weekends).
 - [x] TODO: learn to write an llvm backend by this [link](http://llvm.org/docs/WritingAnLLVMBackend.html); learn gpgpu compiler by this [link](http://llvm.org/docs/CompileCudaWithLLVM.html) and read the source code of faster-rcnn.
 - [x] TODO: review code gen basic concepts
-- [ ] TODO: spare some efforts to write a blog about tensorflow XLA compilier
+- [x] TODO: spare some efforts to write a blog about tensorflow XLA compilier
 - [ ] TODO: `blog or document the basic conecpts of deep learning` in github
 - [ ] TODO: research mxnet compiler tvm
 - [ ] TODO: 争取毕业之前能够以演讲者的身份参加一次LLVM开发者大会，男人，加油！
@@ -19,16 +19,19 @@
 - [x] TODO: read gpucc paper 
 - [x] TODO: paper read, <CUDA: Compiling and Optimizing for a GPU Platform> and grep cuda compile pipeline of official site
 - [x] BackUp: 刚刚有一兄弟跟我说，他导师认为博士应该这么读，14×7，即一周每天都至少花14个小时在科研上，现在细细想来，或许有些道理。博士期间要想真正地有产出，时间的投入肯定少不了，每周每天至少14个小时意味着除去吃饭和睡觉的10个小时，这10个小时是这么分配的，吃饭2个小时（含早中晚，好像也算合理），睡觉8个小时（晚上12点睡觉，早上8点起来，也算合理，不影响第二天的工作效率）。我结合自己又细细想来，在怀柔的一年除了技术栈的堆积，好像也没啥产出，因为自己本来就没有做到14×7。目前已经研二，我又细细想了一下，自己博士期间应该做不到，因为我周末的上午都是在补觉，下午才去做专业相关的东西。做科研的大抵分为四类人：第一类，每周每天的投入少于14个小时，产出也一般，这一类一般是入门级的，有很大的提升空间，需要后天的加强；第二类，每周每天也确实做到了14×7，但是产出一般，实际获得的东西大打折扣，这一类可以认为是资质平庸；第二类，每周每天也确实做到了14×7，也有超越常人的产出，这一类人属于中上的水平吧；还有一类，每天实际只投入了8个小时，但是产出跟第三类14个小时几乎相当甚至超越，这一类人就是所谓的“大牛，屌人”。努力成为最后那一类人吧《记20170906瞎扯》
-- [ ] TODO: spare some efforts to implement a toy programming language by clang and llvm, mainly focus on the backend
+- [x] TODO: spare some efforts to implement a toy programming language by clang and llvm, mainly focus on the backend
 - [x] TODO: research pic (short for Position Independent Code) in llvm, and know how to implement it? what is the constraint?
-- [ ] TODO: for CUDA, its data type does well compatibility with x86, how does CUDA make it?
-- [ ] TODO: for more info about NVVM IR, check its sdk tutorial <NVVM_IR_Specification.pdf> and <PTX_Writers_Guide_To_Interoperability.pdf> in the dir <$CUDA_HOME/doc/pdf>
-- [ ] TODO: for more info about float point on NVIDIA GPU, check out its tutorial <Floating_Point_on_NVIDIA_GPU.pdf>
-- [ ] TODO: in $CUDA_HOME/nvvm/libnvvm-samples, contains the samples of nvvm, check out for the IR and dump it and the ptx files
-- [ ] TODO: research CUDA wrapper, grap its input and output format
+- [x] TODO: for CUDA, its data type does well compatibility with x86, how does CUDA make it?
+- [x] TODO: for more info about NVVM IR, check its sdk tutorial <NVVM_IR_Specification.pdf> and <PTX_Writers_Guide_To_Interoperability.pdf> in the dir <$CUDA_HOME/doc/pdf>
+- [x] TODO: for more info about float point on NVIDIA GPU, check out its tutorial <Floating_Point_on_NVIDIA_GPU.pdf>
+- [x] TODO: in $CUDA_HOME/nvvm/libnvvm-samples, contains the samples of nvvm, check out for the IR and dump it and the ptx files
+- [x] TODO: research CUDA wrapper, grap its input and output format
 - [ ] TODO: follow this guide to implement function call, checkout this [page](https://jonathan2251.github.io/lbd/funccall.html)
-- [ ] TODO: two things，one is to compute the raw on the dev instead of simulator，another is to get tf connect with llvm backend by the ir and know how to dump it
+- [x] TODO: two things，one is to compute the raw on the dev instead of simulator，another is to get tf connect with llvm backend by the ir and know how to dump it
 - [ ] TODO: analysize the function call of leg, and consider how to implement it on Cambricon
 - [x] BACKUP: 昨天跟一位北航的同学吃饭，感觉自己跟他确实不是一个水平的了，硕士期间就已经发了[SIGMOD和ICDE](http://dblp.org/pers/hd/s/Song:Tianshu)，确实很高产，搜了一下他的老师，也很[高产](http://dblp.org/pers/hd/t/Tong:Yongxin)，又搜了他导师的导师，果然是港科数据库和网络领域的[大牛](http://dblp.org/pers/hd/c/Chen_0002:Lei)。他自己的导师跟戴文渊的关系很铁，所以他博士期间又可以在机器学习领域开拓出一片天地，这种机会只能说可遇不可求。对比了一下自己的领域跟数据库领域，果然不是一个类型的，每年PPoPP和CGO总共录取的文章屈指可数,做体系结构相关的确实不容易产出，周期漫长，做出来了，效果不好也发不出文章。以前总是强调自己的工程能力，...不想写了。自己知道接下来做什么就行，稳扎稳打！
 - [ ] TODO: reading <see mips run> and grap the function call 
 - [ ] TODO: re-read the book <Computer Systems: A Programmer's Perspective> before the end of this term 2018/02/13, make a clear schedule for all the chapters and finish CMU course [213](https://www.cs.cmu.edu/~213/) and this [page](http://csapp.cs.cmu.edu/3e/courses.html)
+- [ ] TODO: spare some efforts to learn python and write a simple parser
+
+
