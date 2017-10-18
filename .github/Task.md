@@ -30,10 +30,9 @@
 - [x] TODO: two things，one is to compute the raw on the dev instead of simulator，another is to get tf connect with llvm backend by the ir and know how to dump it
 - [ ] TODO: analysize the function call of leg, and consider how to implement it on Cambricon
 - [x] BACKUP: 昨天跟一位北航的同学吃饭，感觉自己跟他确实不是一个水平的了，硕士期间就已经发了[SIGMOD和ICDE](http://dblp.org/pers/hd/s/Song:Tianshu)，确实很高产，搜了一下他的老师，也很[高产](http://dblp.org/pers/hd/t/Tong:Yongxin)，又搜了他导师的导师，果然是港科数据库和网络领域的[大牛](http://dblp.org/pers/hd/c/Chen_0002:Lei)。他自己的导师跟戴文渊的关系很铁，所以他博士期间又可以在机器学习领域开拓出一片天地，这种机会只能说可遇不可求。对比了一下自己的领域跟数据库领域，果然不是一个类型的，每年PPoPP和CGO总共录取的文章屈指可数,做体系结构相关的确实不容易产出，周期漫长，做出来了，效果不好也发不出文章。以前总是强调自己的工程能力，...不想写了。自己知道接下来做什么就行，稳扎稳打！
-- [ ] TODO: reading <see mips run> and grap the function call 
 - [ ] TODO: re-read the book <Computer Systems: A Programmer's Perspective> before the end of this term 2018/02/13, make a clear schedule for all the chapters and finish CMU course [213](https://www.cs.cmu.edu/~213/) and this [page](http://csapp.cs.cmu.edu/3e/courses.html)
 - [ ] TODO: spare some efforts to learn python and write a simple parser
-- [ ] TODO: spare some efforts to learn the basic knowledge in my CV
+- [ ] TODO: spare some efforts to learn the basic knowledge in my CV, write something down for later use.
 - [ ] TODO: book reading <Linux Kernel Development>, this term try to finish five books, namely <Computer Systems: A Programmer's Perspective>, <Linux Kernel Develpment>, <Understanding The Linux Kernel>, <See MIPS run> and CPU0 Backend development
-
+- [ ] TODO: for clang and llvm, adding new attributes
 
