@@ -33,5 +33,7 @@
 - [ ] TODO: reading <see mips run> and grap the function call 
 - [ ] TODO: re-read the book <Computer Systems: A Programmer's Perspective> before the end of this term 2018/02/13, make a clear schedule for all the chapters and finish CMU course [213](https://www.cs.cmu.edu/~213/) and this [page](http://csapp.cs.cmu.edu/3e/courses.html)
 - [ ] TODO: spare some efforts to learn python and write a simple parser
+- [ ] TODO: spare some efforts to learn the basic knowledge in my CV
+- [ ] TODO: book reading <Linux Kernel Development>, this term try to finish five books, namely <Computer Systems: A Programmer's Perspective>, <Linux Kernel Develpment>, <Understanding The Linux Kernel>, <See MIPS run> and CPU0 Backend development
 
 
