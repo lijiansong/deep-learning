@@ -34,5 +34,6 @@
 - [ ] TODO: spare some efforts to learn python and write a simple parser
 - [ ] TODO: spare some efforts to learn the basic knowledge in my CV, write something down for later use.
 - [ ] TODO: book reading <Linux Kernel Development>, this term try to finish five books, namely <Computer Systems: A Programmer's Perspective>, <Linux Kernel Develpment>, <Understanding The Linux Kernel>, <See MIPS run> and CPU0 Backend development
-- [ ] TODO: for clang and llvm, adding new attributes
+- [x] TODO: for clang and llvm, adding new attributes
+- [ ] TODO: weekends schedule, attend OSDT2017 @tsinghua; spare some efforts for linux kernel and QEMU, learn CPU0 function call implements.
 
