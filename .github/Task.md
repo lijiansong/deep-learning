@@ -33,7 +33,7 @@
 - [ ] TODO: re-read the book <Computer Systems: A Programmer's Perspective> before the end of this term 2018/02/13, make a clear schedule for all the chapters and finish CMU course [213](https://www.cs.cmu.edu/~213/) and this [page](http://csapp.cs.cmu.edu/3e/courses.html)
 - [ ] TODO: spare some efforts to learn python and write a simple parser
 - [ ] TODO: spare some efforts to learn the basic knowledge in my CV, write something down for later use.
-- [ ] TODO: book reading <Linux Kernel Development>, this term try to finish five books, namely <Computer Systems: A Programmer's Perspective>, <Linux Kernel Develpment>, <Understanding The Linux Kernel>, <See MIPS run> and CPU0 Backend development
+- [ ] TODO: book reading <Linux Kernel Development>, this term try to finish five books, namely <Computer Systems: A Programmer's Perspective>, <Linux Kernel Develpment>, <Understanding The Linux Kernel>, <See MIPS run> and CPU0 Backend development.
 - [x] TODO: for clang and llvm, adding new attributes
 - [x] TODO: weekends schedule, attend OSDT2017 @tsinghua; spare some efforts for linux kernel and QEMU, learn CPU0 function call implements.
 - [x] Backup: Linux kernel [mail list](https://lkml.org/), on qemu compile linux kernel, see this [page](https://www.collabora.com/news-and-blog/blog/2017/01/16/setting-up-qemu-kvm-for-kernel-development/)
