@@ -40,4 +40,5 @@
 - [ ] TODO: TensorFlow XLA的方案被寒武纪否定了，并不代表这个东西不能做，找时间调研一下TVM是如何做的，怎么做到软硬件平台的统一，是为了解决哪些关键的难题？
 - [ ] TODO: re-design the assembler and think how to make it structed, modify the original version gradually.. 
 - [ ] TODO: learn flex and bison and try to design a assembler.
-- [ ] TODO: refer to the ANTLR version of [masm](https://github.com/antlr/grammars-v4/tree/master/masm) and [asm6502](https://github.com/antlr/grammars-v4/tree/master/asm6502), implement a simple assembler
+- [x] TODO: refer to the ANTLR version of [masm](https://github.com/antlr/grammars-v4/tree/master/masm) and [asm6502](https://github.com/antlr/grammars-v4/tree/master/asm6502), implement a simple assembler
+- [ ] TODO: research deephi [dnndk](http://www.deephi.com/dnndk) and NVIDIA TensorRT
