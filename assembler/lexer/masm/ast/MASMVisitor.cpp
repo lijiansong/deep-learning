@@ -7,6 +7,6 @@
 // Generated from MASM.g4 by ANTLR 4.7
 
 
-#include "MASMListener.h"
+#include "MASMVisitor.h"
 
 

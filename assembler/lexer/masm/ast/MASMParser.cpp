@@ -7,7 +7,7 @@
 // Generated from MASM.g4 by ANTLR 4.7
 
 
-#include "MASMListener.h"
+#include "MASMVisitor.h"
 
 #include "MASMParser.h"
 
@@ -67,16 +67,11 @@ size_t MASMParser::CompilationUnitContext::getRuleIndex() const {
   return MASMParser::RuleCompilationUnit;
 }
 
-void MASMParser::CompilationUnitContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCompilationUnit(this);
-}
-
-void MASMParser::CompilationUnitContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCompilationUnit(this);
+antlrcpp::Any MASMParser::CompilationUnitContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<MASMVisitor*>(visitor))
+    return parserVisitor->visitCompilationUnit(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 MASMParser::CompilationUnitContext* MASMParser::compilationUnit() {
@@ -216,16 +211,11 @@ size_t MASMParser::SegmentsContext::getRuleIndex() const {
   return MASMParser::RuleSegments;
 }
 
-void MASMParser::SegmentsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSegments(this);
-}
-
-void MASMParser::SegmentsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSegments(this);
+antlrcpp::Any MASMParser::SegmentsContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<MASMVisitor*>(visitor))
+    return parserVisitor->visitSegments(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 MASMParser::SegmentsContext* MASMParser::segments() {
@@ -314,16 +304,11 @@ size_t MASMParser::ProcContext::getRuleIndex() const {
   return MASMParser::RuleProc;
 }
 
-void MASMParser::ProcContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterProc(this);
-}
-
-void MASMParser::ProcContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitProc(this);
+antlrcpp::Any MASMParser::ProcContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<MASMVisitor*>(visitor))
+    return parserVisitor->visitProc(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 MASMParser::ProcContext* MASMParser::proc() {
@@ -460,16 +445,11 @@ size_t MASMParser::CodeContext::getRuleIndex() const {
   return MASMParser::RuleCode;
 }
 
-void MASMParser::CodeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCode(this);
-}
-
-void MASMParser::CodeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCode(this);
+antlrcpp::Any MASMParser::CodeContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<MASMVisitor*>(visitor))
+    return parserVisitor->visitCode(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 MASMParser::CodeContext* MASMParser::code() {
@@ -855,16 +835,11 @@ size_t MASMParser::Binary_exp1Context::getRuleIndex() const {
   return MASMParser::RuleBinary_exp1;
 }
 
-void MASMParser::Binary_exp1Context::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterBinary_exp1(this);
-}
-
-void MASMParser::Binary_exp1Context::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitBinary_exp1(this);
+antlrcpp::Any MASMParser::Binary_exp1Context::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<MASMVisitor*>(visitor))
+    return parserVisitor->visitBinary_exp1(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 MASMParser::Binary_exp1Context* MASMParser::binary_exp1() {
@@ -1027,16 +1002,11 @@ size_t MASMParser::Unuary_exp1Context::getRuleIndex() const {
   return MASMParser::RuleUnuary_exp1;
 }
 
-void MASMParser::Unuary_exp1Context::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterUnuary_exp1(this);
-}
-
-void MASMParser::Unuary_exp1Context::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitUnuary_exp1(this);
+antlrcpp::Any MASMParser::Unuary_exp1Context::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<MASMVisitor*>(visitor))
+    return parserVisitor->visitUnuary_exp1(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 MASMParser::Unuary_exp1Context* MASMParser::unuary_exp1() {
@@ -1131,16 +1101,11 @@ size_t MASMParser::Unuary_exp2Context::getRuleIndex() const {
   return MASMParser::RuleUnuary_exp2;
 }
 
-void MASMParser::Unuary_exp2Context::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterUnuary_exp2(this);
-}
-
-void MASMParser::Unuary_exp2Context::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitUnuary_exp2(this);
+antlrcpp::Any MASMParser::Unuary_exp2Context::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<MASMVisitor*>(visitor))
+    return parserVisitor->visitUnuary_exp2(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 MASMParser::Unuary_exp2Context* MASMParser::unuary_exp2() {
@@ -1237,16 +1202,11 @@ size_t MASMParser::Binary_exp2Context::getRuleIndex() const {
   return MASMParser::RuleBinary_exp2;
 }
 
-void MASMParser::Binary_exp2Context::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterBinary_exp2(this);
-}
-
-void MASMParser::Binary_exp2Context::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitBinary_exp2(this);
+antlrcpp::Any MASMParser::Binary_exp2Context::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<MASMVisitor*>(visitor))
+    return parserVisitor->visitBinary_exp2(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 MASMParser::Binary_exp2Context* MASMParser::binary_exp2() {
@@ -1352,16 +1312,11 @@ size_t MASMParser::NotargumentsContext::getRuleIndex() const {
   return MASMParser::RuleNotarguments;
 }
 
-void MASMParser::NotargumentsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterNotarguments(this);
-}
-
-void MASMParser::NotargumentsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitNotarguments(this);
+antlrcpp::Any MASMParser::NotargumentsContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<MASMVisitor*>(visitor))
+    return parserVisitor->visitNotarguments(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 MASMParser::NotargumentsContext* MASMParser::notarguments() {
@@ -1425,16 +1380,11 @@ size_t MASMParser::Binary_exp3Context::getRuleIndex() const {
   return MASMParser::RuleBinary_exp3;
 }
 
-void MASMParser::Binary_exp3Context::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterBinary_exp3(this);
-}
-
-void MASMParser::Binary_exp3Context::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitBinary_exp3(this);
+antlrcpp::Any MASMParser::Binary_exp3Context::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<MASMVisitor*>(visitor))
+    return parserVisitor->visitBinary_exp3(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 MASMParser::Binary_exp3Context* MASMParser::binary_exp3() {
@@ -1568,16 +1518,11 @@ size_t MASMParser::Unuary_exp3Context::getRuleIndex() const {
   return MASMParser::RuleUnuary_exp3;
 }
 
-void MASMParser::Unuary_exp3Context::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterUnuary_exp3(this);
-}
-
-void MASMParser::Unuary_exp3Context::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitUnuary_exp3(this);
+antlrcpp::Any MASMParser::Unuary_exp3Context::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<MASMVisitor*>(visitor))
+    return parserVisitor->visitUnuary_exp3(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 MASMParser::Unuary_exp3Context* MASMParser::unuary_exp3() {
@@ -1635,16 +1580,11 @@ size_t MASMParser::Binary_exp4Context::getRuleIndex() const {
   return MASMParser::RuleBinary_exp4;
 }
 
-void MASMParser::Binary_exp4Context::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterBinary_exp4(this);
-}
-
-void MASMParser::Binary_exp4Context::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitBinary_exp4(this);
+antlrcpp::Any MASMParser::Binary_exp4Context::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<MASMVisitor*>(visitor))
+    return parserVisitor->visitBinary_exp4(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 MASMParser::Binary_exp4Context* MASMParser::binary_exp4() {
@@ -1741,16 +1681,11 @@ size_t MASMParser::Binary_exp5Context::getRuleIndex() const {
   return MASMParser::RuleBinary_exp5;
 }
 
-void MASMParser::Binary_exp5Context::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterBinary_exp5(this);
-}
-
-void MASMParser::Binary_exp5Context::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitBinary_exp5(this);
+antlrcpp::Any MASMParser::Binary_exp5Context::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<MASMVisitor*>(visitor))
+    return parserVisitor->visitBinary_exp5(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 MASMParser::Binary_exp5Context* MASMParser::binary_exp5() {
@@ -1812,16 +1747,11 @@ size_t MASMParser::Binary_exp6Context::getRuleIndex() const {
   return MASMParser::RuleBinary_exp6;
 }
 
-void MASMParser::Binary_exp6Context::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterBinary_exp6(this);
-}
-
-void MASMParser::Binary_exp6Context::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitBinary_exp6(this);
+antlrcpp::Any MASMParser::Binary_exp6Context::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<MASMVisitor*>(visitor))
+    return parserVisitor->visitBinary_exp6(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 MASMParser::Binary_exp6Context* MASMParser::binary_exp6() {
@@ -1926,16 +1856,11 @@ size_t MASMParser::Binary_exp7Context::getRuleIndex() const {
   return MASMParser::RuleBinary_exp7;
 }
 
-void MASMParser::Binary_exp7Context::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterBinary_exp7(this);
-}
-
-void MASMParser::Binary_exp7Context::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitBinary_exp7(this);
+antlrcpp::Any MASMParser::Binary_exp7Context::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<MASMVisitor*>(visitor))
+    return parserVisitor->visitBinary_exp7(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 MASMParser::Binary_exp7Context* MASMParser::binary_exp7() {
@@ -2083,16 +2008,11 @@ size_t MASMParser::Binary_exp8Context::getRuleIndex() const {
   return MASMParser::RuleBinary_exp8;
 }
 
-void MASMParser::Binary_exp8Context::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterBinary_exp8(this);
-}
-
-void MASMParser::Binary_exp8Context::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitBinary_exp8(this);
+antlrcpp::Any MASMParser::Binary_exp8Context::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<MASMVisitor*>(visitor))
+    return parserVisitor->visitBinary_exp8(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 MASMParser::Binary_exp8Context* MASMParser::binary_exp8() {
@@ -2240,16 +2160,11 @@ size_t MASMParser::Binary_exp9Context::getRuleIndex() const {
   return MASMParser::RuleBinary_exp9;
 }
 
-void MASMParser::Binary_exp9Context::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterBinary_exp9(this);
-}
-
-void MASMParser::Binary_exp9Context::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitBinary_exp9(this);
+antlrcpp::Any MASMParser::Binary_exp9Context::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<MASMVisitor*>(visitor))
+    return parserVisitor->visitBinary_exp9(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 MASMParser::Binary_exp9Context* MASMParser::binary_exp9() {
@@ -2385,16 +2300,11 @@ size_t MASMParser::Unuary_exp4Context::getRuleIndex() const {
   return MASMParser::RuleUnuary_exp4;
 }
 
-void MASMParser::Unuary_exp4Context::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterUnuary_exp4(this);
-}
-
-void MASMParser::Unuary_exp4Context::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitUnuary_exp4(this);
+antlrcpp::Any MASMParser::Unuary_exp4Context::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<MASMVisitor*>(visitor))
+    return parserVisitor->visitUnuary_exp4(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 MASMParser::Unuary_exp4Context* MASMParser::unuary_exp4() {
@@ -2485,16 +2395,11 @@ size_t MASMParser::Unuary_exp5Context::getRuleIndex() const {
   return MASMParser::RuleUnuary_exp5;
 }
 
-void MASMParser::Unuary_exp5Context::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterUnuary_exp5(this);
-}
-
-void MASMParser::Unuary_exp5Context::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitUnuary_exp5(this);
+antlrcpp::Any MASMParser::Unuary_exp5Context::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<MASMVisitor*>(visitor))
+    return parserVisitor->visitUnuary_exp5(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 MASMParser::Unuary_exp5Context* MASMParser::unuary_exp5() {
@@ -2552,16 +2457,11 @@ size_t MASMParser::Binary_exp10Context::getRuleIndex() const {
   return MASMParser::RuleBinary_exp10;
 }
 
-void MASMParser::Binary_exp10Context::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterBinary_exp10(this);
-}
-
-void MASMParser::Binary_exp10Context::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitBinary_exp10(this);
+antlrcpp::Any MASMParser::Binary_exp10Context::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<MASMVisitor*>(visitor))
+    return parserVisitor->visitBinary_exp10(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 MASMParser::Binary_exp10Context* MASMParser::binary_exp10() {
@@ -2662,16 +2562,11 @@ size_t MASMParser::Binary_exp11Context::getRuleIndex() const {
   return MASMParser::RuleBinary_exp11;
 }
 
-void MASMParser::Binary_exp11Context::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterBinary_exp11(this);
-}
-
-void MASMParser::Binary_exp11Context::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitBinary_exp11(this);
+antlrcpp::Any MASMParser::Binary_exp11Context::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<MASMVisitor*>(visitor))
+    return parserVisitor->visitBinary_exp11(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 MASMParser::Binary_exp11Context* MASMParser::binary_exp11() {
@@ -2760,16 +2655,11 @@ size_t MASMParser::Binary_exp12Context::getRuleIndex() const {
   return MASMParser::RuleBinary_exp12;
 }
 
-void MASMParser::Binary_exp12Context::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterBinary_exp12(this);
-}
-
-void MASMParser::Binary_exp12Context::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitBinary_exp12(this);
+antlrcpp::Any MASMParser::Binary_exp12Context::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<MASMVisitor*>(visitor))
+    return parserVisitor->visitBinary_exp12(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 MASMParser::Binary_exp12Context* MASMParser::binary_exp12() {
@@ -2815,16 +2705,11 @@ size_t MASMParser::Directive_exp1Context::getRuleIndex() const {
   return MASMParser::RuleDirective_exp1;
 }
 
-void MASMParser::Directive_exp1Context::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDirective_exp1(this);
-}
-
-void MASMParser::Directive_exp1Context::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDirective_exp1(this);
+antlrcpp::Any MASMParser::Directive_exp1Context::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<MASMVisitor*>(visitor))
+    return parserVisitor->visitDirective_exp1(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 MASMParser::Directive_exp1Context* MASMParser::directive_exp1() {
@@ -2896,16 +2781,11 @@ size_t MASMParser::VariabledeclarationContext::getRuleIndex() const {
   return MASMParser::RuleVariabledeclaration;
 }
 
-void MASMParser::VariabledeclarationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterVariabledeclaration(this);
-}
-
-void MASMParser::VariabledeclarationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitVariabledeclaration(this);
+antlrcpp::Any MASMParser::VariabledeclarationContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<MASMVisitor*>(visitor))
+    return parserVisitor->visitVariabledeclaration(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 MASMParser::VariabledeclarationContext* MASMParser::variabledeclaration() {
@@ -2991,16 +2871,11 @@ size_t MASMParser::MemoryContext::getRuleIndex() const {
   return MASMParser::RuleMemory;
 }
 
-void MASMParser::MemoryContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterMemory(this);
-}
-
-void MASMParser::MemoryContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitMemory(this);
+antlrcpp::Any MASMParser::MemoryContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<MASMVisitor*>(visitor))
+    return parserVisitor->visitMemory(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 MASMParser::MemoryContext* MASMParser::memory() {
@@ -3185,16 +3060,11 @@ size_t MASMParser::SegmentosContext::getRuleIndex() const {
   return MASMParser::RuleSegmentos;
 }
 
-void MASMParser::SegmentosContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSegmentos(this);
-}
-
-void MASMParser::SegmentosContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSegmentos(this);
+antlrcpp::Any MASMParser::SegmentosContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<MASMVisitor*>(visitor))
+    return parserVisitor->visitSegmentos(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 MASMParser::SegmentosContext* MASMParser::segmentos() {
@@ -3340,16 +3210,11 @@ size_t MASMParser::RegisterContext::getRuleIndex() const {
   return MASMParser::RuleRegister;
 }
 
-void MASMParser::RegisterContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterRegister(this);
-}
-
-void MASMParser::RegisterContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitRegister(this);
+antlrcpp::Any MASMParser::RegisterContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<MASMVisitor*>(visitor))
+    return parserVisitor->visitRegister(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 MASMParser::RegisterContext* MASMParser::register() {
@@ -3429,16 +3294,11 @@ size_t MASMParser::OContext::getRuleIndex() const {
   return MASMParser::RuleO;
 }
 
-void MASMParser::OContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterO(this);
-}
-
-void MASMParser::OContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitO(this);
+antlrcpp::Any MASMParser::OContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<MASMVisitor*>(visitor))
+    return parserVisitor->visitO(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 MASMParser::OContext* MASMParser::o() {
@@ -3489,16 +3349,11 @@ size_t MASMParser::OpContext::getRuleIndex() const {
   return MASMParser::RuleOp;
 }
 
-void MASMParser::OpContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterOp(this);
-}
-
-void MASMParser::OpContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitOp(this);
+antlrcpp::Any MASMParser::OpContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<MASMVisitor*>(visitor))
+    return parserVisitor->visitOp(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 MASMParser::OpContext* MASMParser::op() {
@@ -3690,16 +3545,11 @@ size_t MASMParser::OpeContext::getRuleIndex() const {
   return MASMParser::RuleOpe;
 }
 
-void MASMParser::OpeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterOpe(this);
-}
-
-void MASMParser::OpeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitOpe(this);
+antlrcpp::Any MASMParser::OpeContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<MASMVisitor*>(visitor))
+    return parserVisitor->visitOpe(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 MASMParser::OpeContext* MASMParser::ope() {
@@ -3786,16 +3636,11 @@ size_t MASMParser::OperContext::getRuleIndex() const {
   return MASMParser::RuleOper;
 }
 
-void MASMParser::OperContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterOper(this);
-}
-
-void MASMParser::OperContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitOper(this);
+antlrcpp::Any MASMParser::OperContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<MASMVisitor*>(visitor))
+    return parserVisitor->visitOper(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 MASMParser::OperContext* MASMParser::oper() {
@@ -4047,16 +3892,11 @@ size_t MASMParser::OperaContext::getRuleIndex() const {
   return MASMParser::RuleOpera;
 }
 
-void MASMParser::OperaContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterOpera(this);
-}
-
-void MASMParser::OperaContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitOpera(this);
+antlrcpp::Any MASMParser::OperaContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<MASMVisitor*>(visitor))
+    return parserVisitor->visitOpera(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 MASMParser::OperaContext* MASMParser::opera() {
@@ -4178,16 +4018,11 @@ size_t MASMParser::OperatContext::getRuleIndex() const {
   return MASMParser::RuleOperat;
 }
 
-void MASMParser::OperatContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterOperat(this);
-}
-
-void MASMParser::OperatContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitOperat(this);
+antlrcpp::Any MASMParser::OperatContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<MASMVisitor*>(visitor))
+    return parserVisitor->visitOperat(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 MASMParser::OperatContext* MASMParser::operat() {
@@ -4385,16 +4220,11 @@ size_t MASMParser::OperatoContext::getRuleIndex() const {
   return MASMParser::RuleOperato;
 }
 
-void MASMParser::OperatoContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterOperato(this);
-}
-
-void MASMParser::OperatoContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitOperato(this);
+antlrcpp::Any MASMParser::OperatoContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<MASMVisitor*>(visitor))
+    return parserVisitor->visitOperato(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 MASMParser::OperatoContext* MASMParser::operato() {
@@ -4487,16 +4317,11 @@ size_t MASMParser::OperatorContext::getRuleIndex() const {
   return MASMParser::RuleOperator;
 }
 
-void MASMParser::OperatorContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterOperator(this);
-}
-
-void MASMParser::OperatorContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitOperator(this);
+antlrcpp::Any MASMParser::OperatorContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<MASMVisitor*>(visitor))
+    return parserVisitor->visitOperator(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 MASMParser::OperatorContext* MASMParser::operator() {
@@ -4563,16 +4388,11 @@ size_t MASMParser::LContext::getRuleIndex() const {
   return MASMParser::RuleL;
 }
 
-void MASMParser::LContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterL(this);
-}
-
-void MASMParser::LContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitL(this);
+antlrcpp::Any MASMParser::LContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<MASMVisitor*>(visitor))
+    return parserVisitor->visitL(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 MASMParser::LContext* MASMParser::l() {
@@ -4629,16 +4449,11 @@ size_t MASMParser::XContext::getRuleIndex() const {
   return MASMParser::RuleX;
 }
 
-void MASMParser::XContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterX(this);
-}
-
-void MASMParser::XContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitX(this);
+antlrcpp::Any MASMParser::XContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<MASMVisitor*>(visitor))
+    return parserVisitor->visitX(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 MASMParser::XContext* MASMParser::x() {
@@ -4716,16 +4531,11 @@ size_t MASMParser::SContext::getRuleIndex() const {
   return MASMParser::RuleS;
 }
 
-void MASMParser::SContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterS(this);
-}
-
-void MASMParser::SContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitS(this);
+antlrcpp::Any MASMParser::SContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<MASMVisitor*>(visitor))
+    return parserVisitor->visitS(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 MASMParser::SContext* MASMParser::s() {
@@ -4785,16 +4595,11 @@ size_t MASMParser::ShContext::getRuleIndex() const {
   return MASMParser::RuleSh;
 }
 
-void MASMParser::ShContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSh(this);
-}
-
-void MASMParser::ShContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSh(this);
+antlrcpp::Any MASMParser::ShContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<MASMVisitor*>(visitor))
+    return parserVisitor->visitSh(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 MASMParser::ShContext* MASMParser::sh() {
@@ -4852,16 +4657,11 @@ size_t MASMParser::BContext::getRuleIndex() const {
   return MASMParser::RuleB;
 }
 
-void MASMParser::BContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterB(this);
-}
-
-void MASMParser::BContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitB(this);
+antlrcpp::Any MASMParser::BContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<MASMVisitor*>(visitor))
+    return parserVisitor->visitB(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 MASMParser::BContext* MASMParser::b() {
@@ -4912,16 +4712,11 @@ size_t MASMParser::CallContext::getRuleIndex() const {
   return MASMParser::RuleCall;
 }
 
-void MASMParser::CallContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCall(this);
-}
-
-void MASMParser::CallContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCall(this);
+antlrcpp::Any MASMParser::CallContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<MASMVisitor*>(visitor))
+    return parserVisitor->visitCall(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 MASMParser::CallContext* MASMParser::call() {
@@ -4973,16 +4768,11 @@ size_t MASMParser::InterruptionContext::getRuleIndex() const {
   return MASMParser::RuleInterruption;
 }
 
-void MASMParser::InterruptionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterInterruption(this);
-}
-
-void MASMParser::InterruptionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitInterruption(this);
+antlrcpp::Any MASMParser::InterruptionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<MASMVisitor*>(visitor))
+    return parserVisitor->visitInterruption(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 MASMParser::InterruptionContext* MASMParser::interruption() {
@@ -5034,16 +4824,11 @@ size_t MASMParser::InContext::getRuleIndex() const {
   return MASMParser::RuleIn;
 }
 
-void MASMParser::InContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterIn(this);
-}
-
-void MASMParser::InContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitIn(this);
+antlrcpp::Any MASMParser::InContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<MASMVisitor*>(visitor))
+    return parserVisitor->visitIn(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 MASMParser::InContext* MASMParser::in() {
@@ -5083,16 +4868,11 @@ size_t MASMParser::OutContext::getRuleIndex() const {
   return MASMParser::RuleOut;
 }
 
-void MASMParser::OutContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterOut(this);
-}
-
-void MASMParser::OutContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitOut(this);
+antlrcpp::Any MASMParser::OutContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<MASMVisitor*>(visitor))
+    return parserVisitor->visitOut(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 MASMParser::OutContext* MASMParser::out() {
@@ -5148,16 +4928,11 @@ size_t MASMParser::ReContext::getRuleIndex() const {
   return MASMParser::RuleRe;
 }
 
-void MASMParser::ReContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterRe(this);
-}
-
-void MASMParser::ReContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitRe(this);
+antlrcpp::Any MASMParser::ReContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<MASMVisitor*>(visitor))
+    return parserVisitor->visitRe(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 MASMParser::ReContext* MASMParser::re() {
@@ -5310,16 +5085,11 @@ size_t MASMParser::DirectivesContext::getRuleIndex() const {
   return MASMParser::RuleDirectives;
 }
 
-void MASMParser::DirectivesContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDirectives(this);
-}
-
-void MASMParser::DirectivesContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDirectives(this);
+antlrcpp::Any MASMParser::DirectivesContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<MASMVisitor*>(visitor))
+    return parserVisitor->visitDirectives(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 MASMParser::DirectivesContext* MASMParser::directives() {
@@ -5473,16 +5243,11 @@ size_t MASMParser::TyContext::getRuleIndex() const {
   return MASMParser::RuleTy;
 }
 
-void MASMParser::TyContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTy(this);
-}
-
-void MASMParser::TyContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTy(this);
+antlrcpp::Any MASMParser::TyContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<MASMVisitor*>(visitor))
+    return parserVisitor->visitTy(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 MASMParser::TyContext* MASMParser::ty() {
@@ -5551,16 +5316,11 @@ size_t MASMParser::QuestionContext::getRuleIndex() const {
   return MASMParser::RuleQuestion;
 }
 
-void MASMParser::QuestionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterQuestion(this);
-}
-
-void MASMParser::QuestionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitQuestion(this);
+antlrcpp::Any MASMParser::QuestionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<MASMVisitor*>(visitor))
+    return parserVisitor->visitQuestion(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 MASMParser::QuestionContext* MASMParser::question() {
@@ -5600,16 +5360,11 @@ size_t MASMParser::TimeContext::getRuleIndex() const {
   return MASMParser::RuleTime;
 }
 
-void MASMParser::TimeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTime(this);
-}
-
-void MASMParser::TimeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MASMListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTime(this);
+antlrcpp::Any MASMParser::TimeContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<MASMVisitor*>(visitor))
+    return parserVisitor->visitTime(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 MASMParser::TimeContext* MASMParser::time() {

@@ -6,7 +6,7 @@
 // Generated from asm6502.g4 by ANTLR 4.7
 
 
-#include "asm6502Listener.h"
+#include "asm6502Visitor.h"
 
 #include "asm6502Parser.h"
 
@@ -62,16 +62,11 @@ size_t asm6502Parser::ProgContext::getRuleIndex() const {
   return asm6502Parser::RuleProg;
 }
 
-void asm6502Parser::ProgContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<asm6502Listener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterProg(this);
-}
-
-void asm6502Parser::ProgContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<asm6502Listener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitProg(this);
+antlrcpp::Any asm6502Parser::ProgContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<asm6502Visitor*>(visitor))
+    return parserVisitor->visitProg(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 asm6502Parser::ProgContext* asm6502Parser::prog() {
@@ -279,16 +274,11 @@ size_t asm6502Parser::LineContext::getRuleIndex() const {
   return asm6502Parser::RuleLine;
 }
 
-void asm6502Parser::LineContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<asm6502Listener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLine(this);
-}
-
-void asm6502Parser::LineContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<asm6502Listener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLine(this);
+antlrcpp::Any asm6502Parser::LineContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<asm6502Visitor*>(visitor))
+    return parserVisitor->visitLine(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 asm6502Parser::LineContext* asm6502Parser::line() {
@@ -369,16 +359,11 @@ size_t asm6502Parser::InstructionContext::getRuleIndex() const {
   return asm6502Parser::RuleInstruction;
 }
 
-void asm6502Parser::InstructionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<asm6502Listener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterInstruction(this);
-}
-
-void asm6502Parser::InstructionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<asm6502Listener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitInstruction(this);
+antlrcpp::Any asm6502Parser::InstructionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<asm6502Visitor*>(visitor))
+    return parserVisitor->visitInstruction(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 asm6502Parser::InstructionContext* asm6502Parser::instruction() {
@@ -461,16 +446,11 @@ size_t asm6502Parser::AssemblerinstructionContext::getRuleIndex() const {
   return asm6502Parser::RuleAssemblerinstruction;
 }
 
-void asm6502Parser::AssemblerinstructionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<asm6502Listener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterAssemblerinstruction(this);
-}
-
-void asm6502Parser::AssemblerinstructionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<asm6502Listener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitAssemblerinstruction(this);
+antlrcpp::Any asm6502Parser::AssemblerinstructionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<asm6502Visitor*>(visitor))
+    return parserVisitor->visitAssemblerinstruction(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 asm6502Parser::AssemblerinstructionContext* asm6502Parser::assemblerinstruction() {
@@ -547,16 +527,11 @@ size_t asm6502Parser::AssembleropcodeContext::getRuleIndex() const {
   return asm6502Parser::RuleAssembleropcode;
 }
 
-void asm6502Parser::AssembleropcodeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<asm6502Listener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterAssembleropcode(this);
-}
-
-void asm6502Parser::AssembleropcodeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<asm6502Listener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitAssembleropcode(this);
+antlrcpp::Any asm6502Parser::AssembleropcodeContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<asm6502Visitor*>(visitor))
+    return parserVisitor->visitAssembleropcode(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 asm6502Parser::AssembleropcodeContext* asm6502Parser::assembleropcode() {
@@ -596,16 +571,11 @@ size_t asm6502Parser::LblContext::getRuleIndex() const {
   return asm6502Parser::RuleLbl;
 }
 
-void asm6502Parser::LblContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<asm6502Listener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLbl(this);
-}
-
-void asm6502Parser::LblContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<asm6502Listener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLbl(this);
+antlrcpp::Any asm6502Parser::LblContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<asm6502Visitor*>(visitor))
+    return parserVisitor->visitLbl(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 asm6502Parser::LblContext* asm6502Parser::lbl() {
@@ -651,16 +621,11 @@ size_t asm6502Parser::ArgumentlistContext::getRuleIndex() const {
   return asm6502Parser::RuleArgumentlist;
 }
 
-void asm6502Parser::ArgumentlistContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<asm6502Listener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterArgumentlist(this);
-}
-
-void asm6502Parser::ArgumentlistContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<asm6502Listener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitArgumentlist(this);
+antlrcpp::Any asm6502Parser::ArgumentlistContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<asm6502Visitor*>(visitor))
+    return parserVisitor->visitArgumentlist(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 asm6502Parser::ArgumentlistContext* asm6502Parser::argumentlist() {
@@ -711,16 +676,11 @@ size_t asm6502Parser::LabelContext::getRuleIndex() const {
   return asm6502Parser::RuleLabel;
 }
 
-void asm6502Parser::LabelContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<asm6502Listener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLabel(this);
-}
-
-void asm6502Parser::LabelContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<asm6502Listener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLabel(this);
+antlrcpp::Any asm6502Parser::LabelContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<asm6502Visitor*>(visitor))
+    return parserVisitor->visitLabel(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 asm6502Parser::LabelContext* asm6502Parser::label() {
@@ -780,16 +740,11 @@ size_t asm6502Parser::ArgumentContext::getRuleIndex() const {
   return asm6502Parser::RuleArgument;
 }
 
-void asm6502Parser::ArgumentContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<asm6502Listener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterArgument(this);
-}
-
-void asm6502Parser::ArgumentContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<asm6502Listener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitArgument(this);
+antlrcpp::Any asm6502Parser::ArgumentContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<asm6502Visitor*>(visitor))
+    return parserVisitor->visitArgument(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 asm6502Parser::ArgumentContext* asm6502Parser::argument() {
@@ -908,16 +863,11 @@ size_t asm6502Parser::PrefixContext::getRuleIndex() const {
   return asm6502Parser::RulePrefix;
 }
 
-void asm6502Parser::PrefixContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<asm6502Listener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPrefix(this);
-}
-
-void asm6502Parser::PrefixContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<asm6502Listener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPrefix(this);
+antlrcpp::Any asm6502Parser::PrefixContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<asm6502Visitor*>(visitor))
+    return parserVisitor->visitPrefix(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 asm6502Parser::PrefixContext* asm6502Parser::prefix() {
@@ -957,16 +907,11 @@ size_t asm6502Parser::StringContext::getRuleIndex() const {
   return asm6502Parser::RuleString;
 }
 
-void asm6502Parser::StringContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<asm6502Listener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterString(this);
-}
-
-void asm6502Parser::StringContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<asm6502Listener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitString(this);
+antlrcpp::Any asm6502Parser::StringContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<asm6502Visitor*>(visitor))
+    return parserVisitor->visitString(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 asm6502Parser::StringContext* asm6502Parser::string() {
@@ -1006,16 +951,11 @@ size_t asm6502Parser::NameContext::getRuleIndex() const {
   return asm6502Parser::RuleName;
 }
 
-void asm6502Parser::NameContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<asm6502Listener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterName(this);
-}
-
-void asm6502Parser::NameContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<asm6502Listener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitName(this);
+antlrcpp::Any asm6502Parser::NameContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<asm6502Visitor*>(visitor))
+    return parserVisitor->visitName(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 asm6502Parser::NameContext* asm6502Parser::name() {
@@ -1055,16 +995,11 @@ size_t asm6502Parser::NumberContext::getRuleIndex() const {
   return asm6502Parser::RuleNumber;
 }
 
-void asm6502Parser::NumberContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<asm6502Listener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterNumber(this);
-}
-
-void asm6502Parser::NumberContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<asm6502Listener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitNumber(this);
+antlrcpp::Any asm6502Parser::NumberContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<asm6502Visitor*>(visitor))
+    return parserVisitor->visitNumber(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 asm6502Parser::NumberContext* asm6502Parser::number() {
@@ -1104,16 +1039,11 @@ size_t asm6502Parser::CommentContext::getRuleIndex() const {
   return asm6502Parser::RuleComment;
 }
 
-void asm6502Parser::CommentContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<asm6502Listener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterComment(this);
-}
-
-void asm6502Parser::CommentContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<asm6502Listener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitComment(this);
+antlrcpp::Any asm6502Parser::CommentContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<asm6502Visitor*>(visitor))
+    return parserVisitor->visitComment(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 asm6502Parser::CommentContext* asm6502Parser::comment() {
@@ -1393,16 +1323,11 @@ size_t asm6502Parser::OpcodeContext::getRuleIndex() const {
   return asm6502Parser::RuleOpcode;
 }
 
-void asm6502Parser::OpcodeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<asm6502Listener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterOpcode(this);
-}
-
-void asm6502Parser::OpcodeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<asm6502Listener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitOpcode(this);
+antlrcpp::Any asm6502Parser::OpcodeContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<asm6502Visitor*>(visitor))
+    return parserVisitor->visitOpcode(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 asm6502Parser::OpcodeContext* asm6502Parser::opcode() {
