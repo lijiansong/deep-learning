@@ -41,4 +41,6 @@
 - [ ] TODO: re-design the assembler and think how to make it structed, modify the original version gradually.. 
 - [ ] TODO: learn flex and bison and try to design a assembler.
 - [x] TODO: refer to the ANTLR version of [masm](https://github.com/antlr/grammars-v4/tree/master/masm) and [asm6502](https://github.com/antlr/grammars-v4/tree/master/asm6502), implement a simple assembler
-- [ ] TODO: research deephi [dnndk](http://www.deephi.com/dnndk) and NVIDIA TensorRT
+- [x] TODO: research deephi [dnndk](http://www.deephi.com/dnndk) and NVIDIA TensorRT
+- [ ] TensorStack: py & tf & go & cpp11 & docker ...
+
