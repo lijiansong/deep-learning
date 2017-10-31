@@ -43,4 +43,5 @@
 - [x] TODO: refer to the ANTLR version of [masm](https://github.com/antlr/grammars-v4/tree/master/masm) and [asm6502](https://github.com/antlr/grammars-v4/tree/master/asm6502), implement a simple assembler
 - [x] TODO: research deephi [dnndk](http://www.deephi.com/dnndk) and NVIDIA TensorRT
 - [ ] TensorStack: py & tf & go & cpp11 & docker ...
+- [x] TODO: finish transplanting assembler backend of instruction verifying
 
