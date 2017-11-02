@@ -28,3 +28,5 @@
 - cuda nvvm details see this [page](http://on-demand.gputechconf.com/gtc/2013/presentations/S3185-Building-GPU-Compilers-libNVVM.pdf)
 - cuda NVVM IR samples see this [page](https://github.com/nvidia-compiler-sdk/nvvmir-samples)
 - position independent code, see this [blog](http://eli.thegreenplace.net/2011/11/03/position-independent-code-pic-in-shared-libraries/)
+- elf-io interface, see [here](http://elfio.sourceforge.net/)
+- gnu assembler, checkout this [page](https://sourceware.org/binutils/docs-2.29/as/index.html)

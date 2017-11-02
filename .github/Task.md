@@ -44,4 +44,5 @@
 - [x] TODO: research deephi [dnndk](http://www.deephi.com/dnndk) and NVIDIA TensorRT
 - [ ] TensorStack: py & tf & go & cpp11 & docker ...
 - [x] TODO: finish transplanting assembler backend of instruction verifying
+- [x] TODO: grap elf-io, details see [here](http://elfio.sourceforge.net/) 
 
