@@ -45,4 +45,10 @@
 - [ ] TensorStack: py & tf & go & cpp11 & docker ...
 - [x] TODO: finish transplanting assembler backend of instruction verifying
 - [x] TODO: grap elf-io, details see [here](http://elfio.sourceforge.net/) 
+<<<<<<< HEAD
 - [ ] TensorStack: style transfer and finish the video form... 
+=======
+- [ ] TODO: blog the performance of mat-mul in single thread 、multi-thread and GPU, and compute the speed-up ratio
+
+
+>>>>>>> 194bbfc57446cea0cd762c7679e503bae5df3a1a

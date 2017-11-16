@@ -22,7 +22,7 @@
 - llvm tools [page](http://llvm.org/docs/CommandGuide/) and [llvm-lit](https://llvm.org/docs/CommandGuide/lit.html), more details of llvm test guide see this [page](http://llvm.org/docs/TestingGuide.html)
 - [x] llvm backend for cpu0 arch --- about function call, see this [page](https://jonathan2251.github.io/lbd/funccall.html)
 - [ ] [Global Instruction Selection in LLVM](https://2pi.dk/llvm/global-isel)
-- [ ] FileChecking tool, see this [page](https://github.com/lijiansong/llvm/blob/master/docs/CommandGuide/FileCheck.rst)
+- [x] FileChecking tool, see this [page](https://github.com/lijiansong/llvm/blob/master/docs/CommandGuide/FileCheck.rst)
 - mxnet tvm compilier tutorial, see this [page](http://docs.tvmlang.org/index.html) and tvm news see this [page](http://tvmlang.org/)
 - cuda nvcc compiler driver, see this [page](http://docs.nvidia.com/cuda/cuda-compiler-driver-nvcc/index.html#axzz4riJBNyQD)
 - cuda nvvm details see this [page](http://on-demand.gputechconf.com/gtc/2013/presentations/S3185-Building-GPU-Compilers-libNVVM.pdf)
@@ -30,9 +30,26 @@
 - position independent code, see this [blog](http://eli.thegreenplace.net/2011/11/03/position-independent-code-pic-in-shared-libraries/)
 - elf-io interface, see [here](http://elfio.sourceforge.net/)
 - gnu assembler, checkout this [page](https://sourceware.org/binutils/docs-2.29/as/index.html)
+<<<<<<< HEAD
 - tensorflow api [page](https://www.tensorflow.org/versions/r0.12/api_docs/python/index.html)
 - stanford numpy api [page](http://cs231n.github.io/python-numpy-tutorial/)
 - stanford CS 20SI: Tensorflow for Deep Learning Research, checkout this [page](https://web.stanford.edu/class/cs20si/syllabus.html)
 - tasklist.vim, checkout this [page](https://github.com/vim-scripts/TaskList.vim)
 - refer to this blog to config VIM for PYTHON, checkout this [page](http://www.cnblogs.com/samwei/archive/2011/04/25/2026211.html)
 - refer to this blog to config Intellij for tensorflow, checkout this [page](http://www.voidcn.com/article/p-ckrbabya-qx.html)
+=======
+- for cudaMalloc, its definition is like this:
+```
+float *d_A = NULL;
+err = cudaMalloc((void **)&d_A, size);
+```
+[link](https://devtalk.nvidia.com/default/topic/472384/cuda-programming-and-performance/cudamalloc-point-to-a-pointer/post/3357107/) and stackoverflow [page](https://stackoverflow.com/questions/7989039/use-of-cudamalloc-why-the-double-pointer)
+while for OpenCL, its memory model is by `clCreateBuffer and clSetKernelArg`, you have to write code like this:
+```
+cl_mem memObj1 = NULL;
+memObj1 = clCreateBuffer(context, CL_MEM_READ_WRITE, contentLength, NULL, &ret);
+clSetKernelArg(kernel, 0, sizeof(cl_mem), (void *)&memObj1);
+```
+opencl [page](https://www.khronos.org/registry/OpenCL/sdk/1.0/docs/man/xhtml/clSetKernelArg.html)
+
+>>>>>>> 194bbfc57446cea0cd762c7679e503bae5df3a1a
