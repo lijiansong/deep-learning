@@ -30,14 +30,12 @@
 - position independent code, see this [blog](http://eli.thegreenplace.net/2011/11/03/position-independent-code-pic-in-shared-libraries/)
 - elf-io interface, see [here](http://elfio.sourceforge.net/)
 - gnu assembler, checkout this [page](https://sourceware.org/binutils/docs-2.29/as/index.html)
-<<<<<<< HEAD
 - tensorflow api [page](https://www.tensorflow.org/versions/r0.12/api_docs/python/index.html)
 - stanford numpy api [page](http://cs231n.github.io/python-numpy-tutorial/)
 - stanford CS 20SI: Tensorflow for Deep Learning Research, checkout this [page](https://web.stanford.edu/class/cs20si/syllabus.html)
 - tasklist.vim, checkout this [page](https://github.com/vim-scripts/TaskList.vim)
 - refer to this blog to config VIM for PYTHON, checkout this [page](http://www.cnblogs.com/samwei/archive/2011/04/25/2026211.html)
 - refer to this blog to config Intellij for tensorflow, checkout this [page](http://www.voidcn.com/article/p-ckrbabya-qx.html)
-=======
 - for cudaMalloc, its definition is like this:
 ```
 float *d_A = NULL;
@@ -46,10 +44,16 @@ err = cudaMalloc((void **)&d_A, size);
 [link](https://devtalk.nvidia.com/default/topic/472384/cuda-programming-and-performance/cudamalloc-point-to-a-pointer/post/3357107/) and stackoverflow [page](https://stackoverflow.com/questions/7989039/use-of-cudamalloc-why-the-double-pointer)
 while for OpenCL, its memory model is by `clCreateBuffer and clSetKernelArg`, you have to write code like this:
 ```
-cl_mem memObj1 = NULL;
+cl_mem memObj1 = NULL;https://stackoverflow.com/questions/47068709/your-cpu-supports-instructions-that-this-tensorflow-binary-was-not-compiled-to-u
 memObj1 = clCreateBuffer(context, CL_MEM_READ_WRITE, contentLength, NULL, &ret);
 clSetKernelArg(kernel, 0, sizeof(cl_mem), (void *)&memObj1);
 ```
 opencl [page](https://www.khronos.org/registry/OpenCL/sdk/1.0/docs/man/xhtml/clSetKernelArg.html)
 
->>>>>>> 194bbfc57446cea0cd762c7679e503bae5df3a1a
+- Modern CPUs provide a lot of low-level instructions, besides the usual arithmetic and logic, known as extensions, e.g. SSE2, SSE4, AVX, etc, see wiki [page](https://en.wikipedia.org/wiki/Advanced_Vector_Extensions). However, tensorflow default distribution is built [without CPU extensions](https://github.com/tensorflow/tensorflow/issues/7778), such as SSE4.1, SSE4.2, AVX, AVX2, FMA, etc. The default builds (ones from pip install tensorflow) are intended to be compatible with as many CPUs as possible, see stackoverflow [page](https://stackoverflow.com/questions/47068709/your-cpu-supports-instructions-that-this-tensorflow-binary-was-not-compiled-to-u)
+- TF_CPP_MIN_LOG_LEVEL is a TensorFlow environment variable responsible for the logs, to silence INFO logs set it to 1, to filter out WARNING 2 and to additionally silence ERROR logs (not recommended) set it to 3:
+```
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL']='2'
+import tensorflow as tf
+```
