@@ -57,3 +57,4 @@ import os
 os.environ['TF_CPP_MIN_LOG_LEVEL']='2'
 import tensorflow as tf
 ```
+- Check the verison of numpy or scipy by `python -c "import numpy; print numpy.__version__" `
