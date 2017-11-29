@@ -60,3 +60,4 @@ import tensorflow as tf
 - Check the verison of numpy or scipy by `python -c "import numpy; print numpy.__version__" `
 - jupyter notebook tutorial, checkout this [page](http://jupyter-notebook.readthedocs.io/en/stable/)
 - `NVPTX ABI`, PTX Writer's Guide to Interoperability, follow this [page](http://docs.nvidia.com/cuda/ptx-writers-guide-to-interoperability/index.html)
+- Halide, its github [page](https://github.com/halide/Halide) and its [homepage](http://halide-lang.org/)
