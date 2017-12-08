@@ -49,4 +49,4 @@
 - [x] TensorStack: finish image style transfer 
 - [ ] TODO: blog the performance of mat-mul in single thread 、multi-thread and GPU, and compute the speed-up ratio
 - [ ] TensorStack: real-time video stylize
-- [ ] TS: simulating video with ffmpeg, checkout this stackoverflow [page](https://stackoverflow.com/questions/15792105/simulating-tv-noise)
+- [ ] TS: simulating video with ffmpeg, checkout this stackoverflow [page](https://stackoverflow.com/questions/15792105/simulating-tv-noise) and its normal use see this [cnblog](http://www.cnblogs.com/wainiwann/p/4128154.html)
