@@ -52,3 +52,4 @@
 - [ ] TS: simulating video with ffmpeg, checkout this stackoverflow [page](https://stackoverflow.com/questions/15792105/simulating-tv-noise) and its normal use see this [cnblog](http://www.cnblogs.com/wainiwann/p/4128154.html)
 - [x] Backup: for webcam problems in ubuntu14.04, checkout this [page](https://help.ubuntu.com/community/Webcam)
 - [x] Backup: ffmpeg basic usage checkout this [page](https://trac.ffmpeg.org/wiki/Capture/Webcam)
+- [x] Backup: OpenCV real-time video encode and decode from camera and display, you can checkout this [page](https://www.tu-ilmenau.de/fileadmin/public/mt_ams/02_15-04-20VideoCodingIrrelevanceRedundancy.pdf)
