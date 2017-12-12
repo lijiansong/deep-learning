@@ -53,3 +53,4 @@
 - [x] Backup: for webcam problems in ubuntu14.04, checkout this [page](https://help.ubuntu.com/community/Webcam)
 - [x] Backup: ffmpeg basic usage checkout this [page](https://trac.ffmpeg.org/wiki/Capture/Webcam)
 - [x] Backup: OpenCV real-time video encode and decode from camera and display, you can checkout this [page](https://www.tu-ilmenau.de/fileadmin/public/mt_ams/02_15-04-20VideoCodingIrrelevanceRedundancy.pdf)
+- [x] Backup: halide mit image processing [course](https://stellar.mit.edu/S/course/6/sp15/6.815/materials.html) 
