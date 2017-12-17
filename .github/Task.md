@@ -55,3 +55,4 @@
 - [x] Backup: OpenCV real-time video encode and decode from camera and display, you can checkout this [page](https://www.tu-ilmenau.de/fileadmin/public/mt_ams/02_15-04-20VideoCodingIrrelevanceRedundancy.pdf)
 - [x] Backup: halide mit image processing [course](https://stellar.mit.edu/S/course/6/sp15/6.815/materials.html)
 - [x] TS: implement real-time video style with no optical flow algorithm
+- [ ] TODO: tensorstack, research golang block queue, checkout these pages, [1](https://blog.golang.org/advanced-go-concurrency-patterns)[2](https://blog.golang.org/concurrency-is-not-parallelism)[3](https://talks.golang.org/2012/concurrency.slide#1) ; manage python dependencies by python [requirements file](https://pip.readthedocs.io/en/1.1/requirements.html#requirements-files)
