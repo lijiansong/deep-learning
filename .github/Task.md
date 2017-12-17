@@ -57,3 +57,6 @@
 - [x] TS: implement real-time video style with no optical flow algorithm
 - [ ] TODO: tensorstack, research golang block queue, checkout these pages, [1](https://blog.golang.org/advanced-go-concurrency-patterns)[2](https://blog.golang.org/concurrency-is-not-parallelism)[3](https://talks.golang.org/2012/concurrency.slide#1) ; manage python dependencies by python [requirements file](https://pip.readthedocs.io/en/1.1/requirements.html#requirements-files)
 - [x] Backup: python requirements file auto-gen see this [page](http://www.idiotinside.com/2015/05/10/python-auto-generate-requirements-txt/)
+- [ ] TODO: reasearch TensorRT, Tensorflow XLA and MXnet TVM
+  
+
