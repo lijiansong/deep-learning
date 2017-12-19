@@ -59,4 +59,4 @@
 - [x] Backup: python requirements file auto-gen see this [page](http://www.idiotinside.com/2015/05/10/python-auto-generate-requirements-txt/)
 - [ ] TODO: reasearch TensorRT, Tensorflow XLA and MXnet TVM
 - [x] TODO: NVIDIA TensorRT, see its offical web [page](https://developer.nvidia.com/tensorrt) and blog [page](https://devblogs.nvidia.com/parallelforall/production-deep-learning-nvidia-gpu-inference-engine/) and CSDN [blog](http://blog.csdn.net/jesse_mx/article/details/56022967)
-
+- [x] Backup: What’s the Difference Between Deep Learning Training and Inference? see nv offical [blog](https://blogs.nvidia.com/blog/2016/08/22/difference-deep-learning-training-inference-ai/)
