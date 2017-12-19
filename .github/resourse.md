@@ -2,6 +2,7 @@
 
 ### several existing courses:
 - feifei li, stanford [cs231n](http://cs231n.stanford.edu/)
+- stanford, [ee380](http://web.stanford.edu/class/ee380/)
 
 ### other resources about compiling tech
 - compile cuda with clang, see this [link](http://llvm.org/docs/CompileCudaWithLLVM.html)
@@ -61,3 +62,5 @@ import tensorflow as tf
 - jupyter notebook tutorial, checkout this [page](http://jupyter-notebook.readthedocs.io/en/stable/)
 - `NVPTX ABI`, PTX Writer's Guide to Interoperability, follow this [page](http://docs.nvidia.com/cuda/ptx-writers-guide-to-interoperability/index.html)
 - Halide, its github [page](https://github.com/halide/Halide) and its [homepage](http://halide-lang.org/)
+
+
