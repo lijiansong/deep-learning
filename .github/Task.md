@@ -60,3 +60,4 @@
 - [ ] TODO: reasearch TensorRT, Tensorflow XLA and MXnet TVM
 - [x] TODO: NVIDIA TensorRT, see its offical web [page](https://developer.nvidia.com/tensorrt) and blog [page](https://devblogs.nvidia.com/parallelforall/production-deep-learning-nvidia-gpu-inference-engine/) and CSDN [blog](http://blog.csdn.net/jesse_mx/article/details/56022967)
 - [x] Backup: What’s the Difference Between Deep Learning Training and Inference? see nv offical [blog](https://blogs.nvidia.com/blog/2016/08/22/difference-deep-learning-training-inference-ai/)
+- [x] Backup: TensorRT 3: Faster TensorFlow Inference and Volta Support, see NVIDIA official [blog](https://devblogs.nvidia.com/parallelforall/tensorrt-3-faster-tensorflow-inference/)
