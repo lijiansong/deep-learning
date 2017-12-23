@@ -62,21 +62,24 @@
 - [x] Backup: What’s the Difference Between Deep Learning Training and Inference? see nv offical [blog](https://blogs.nvidia.com/blog/2016/08/22/difference-deep-learning-training-inference-ai/)
 - [x] Backup: TensorRT 3: Faster TensorFlow Inference and Volta Support, see NVIDIA official [blog](https://devblogs.nvidia.com/parallelforall/tensorrt-3-faster-tensorflow-inference/)
 - [x] Backup: for existing deep-learning compiling solution:
+  
   - Tensorflow XLA:
-    - https://yq.aliyun.com/articles/238957
-    - https://www.jiqizhixin.com/articles/2017-03-10
-    - https://github.com/tensorflow/tensorflow/issues/9194
+    - yunqi blog, see this link: https://yq.aliyun.com/articles/238957
+    - jiqizhixin blog see here: https://www.jiqizhixin.com/articles/2017-03-10
+    - tensorflow github issue see here: https://github.com/tensorflow/tensorflow/issues/9194
+  
   - NNVM/TVM：
-    - https://www.jiqizhixin.com/articles/2017-08-18-4
-    - https://zhuanlan.zhihu.com/p/28597477
-    - http://www.kejilie.com/iyiou/article/nmqmUr.html
-    - http://www.tvmlang.org/2017/10/30/Bringing-AMDGPUs-to-TVM-Stack-and-NNVM-Compiler-with-ROCm.html
-    - http://nnvm.tvmlang.org/tutorials/from_mxnet.html
+    - jiqizhixin blog: https://www.jiqizhixin.com/articles/2017-08-18-4
+    - zhihuzhuanlan: https://zhuanlan.zhihu.com/p/28597477
+    - another report: http://www.kejilie.com/iyiou/article/nmqmUr.html
+    - TVM official dev blog: http://www.tvmlang.org/2017/10/30/Bringing-AMDGPUs-to-TVM-Stack-and-NNVM-Compiler-with-ROCm.html
+    - tvm tutorial: http://nnvm.tvmlang.org/tutorials/from_mxnet.html
+    
   - Halide：
-    - http://halide-lang.org
-    - http://blog.csdn.net/JackyTintin/article/details/7833774
+    - official blog: http://halide-lang.org
+    - csdn blog: http://blog.csdn.net/JackyTintin/article/details/7833774
 
-
+- [x] TODO: OpenCV display big images, checkout this stackoverflow [page](https://stackoverflow.com/questions/35180764/opencv-python-image-too-big-to-display)
 
 
 
