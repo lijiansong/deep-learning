@@ -76,7 +76,7 @@
   - Halide：
     - official blog: http://halide-lang.org
     - csdn blog: http://blog.csdn.net/JackyTintin/article/details/7833774
-
+- Linux google chrome browser install see this [page](http://www.cnblogs.com/hongdada/p/6443353.html), then you can install any plugins into this browser, e.g. 穹顶穿越, ....
 
 
 
