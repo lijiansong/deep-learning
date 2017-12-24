@@ -62,5 +62,5 @@ import tensorflow as tf
 - jupyter notebook tutorial, checkout this [page](http://jupyter-notebook.readthedocs.io/en/stable/)
 - `NVPTX ABI`, PTX Writer's Guide to Interoperability, follow this [page](http://docs.nvidia.com/cuda/ptx-writers-guide-to-interoperability/index.html)
 - Halide, its github [page](https://github.com/halide/Halide) and its [homepage](http://halide-lang.org/)
-
+- gnome, gdk-pixbuf utils, see this [page](https://developer.gnome.org/gdk-pixbuf/2.22/gdk-pixbuf-util.html)
 
