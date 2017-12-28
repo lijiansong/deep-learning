@@ -63,4 +63,5 @@ import tensorflow as tf
 - `NVPTX ABI`, PTX Writer's Guide to Interoperability, follow this [page](http://docs.nvidia.com/cuda/ptx-writers-guide-to-interoperability/index.html)
 - Halide, its github [page](https://github.com/halide/Halide) and its [homepage](http://halide-lang.org/)
 - gnome, gdk-pixbuf utils, see this [page](https://developer.gnome.org/gdk-pixbuf/2.22/gdk-pixbuf-util.html)
-
+- DLVM, Modern Compiler Infrastructure for Deep Learning Systems, checkout this [page](http://dlvm.org/)
+  - NIPS, short for Conference and Workshop on Neural Information Processing Systems, CCF A
