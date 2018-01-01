@@ -65,3 +65,4 @@ import tensorflow as tf
 - gnome, gdk-pixbuf utils, see this [page](https://developer.gnome.org/gdk-pixbuf/2.22/gdk-pixbuf-util.html)
 - DLVM, Modern Compiler Infrastructure for Deep Learning Systems, checkout this [page](http://dlvm.org/)
   - NIPS, short for Conference and Workshop on Neural Information Processing Systems, CCF A
+- gpucc: an open-source gpgpu compiler, see its llvm developer meeting [slides](http://llvm.org/devmtg/2015-10/slides/Wu-OptimizingLLVMforGPGPU.pdf)
