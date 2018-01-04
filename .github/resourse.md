@@ -66,3 +66,4 @@ import tensorflow as tf
 - DLVM, Modern Compiler Infrastructure for Deep Learning Systems, checkout this [page](http://dlvm.org/)
   - NIPS, short for Conference and Workshop on Neural Information Processing Systems, CCF A
 - gpucc: an open-source gpgpu compiler, see its llvm developer meeting [slides](http://llvm.org/devmtg/2015-10/slides/Wu-OptimizingLLVMforGPGPU.pdf)
+- cuda constant memory, see [cuda c programming guide](http://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html) and [blog](https://www.cnblogs.com/1024incn/p/4706215.html) and HPC Tech Tips:[cuda memory types performance comparison](https://www.microway.com/hpc-tech-tips/gpu-memory-types-performance-comparison/)
