@@ -67,3 +67,4 @@ import tensorflow as tf
   - NIPS, short for Conference and Workshop on Neural Information Processing Systems, CCF A
 - gpucc: an open-source gpgpu compiler, see its llvm developer meeting [slides](http://llvm.org/devmtg/2015-10/slides/Wu-OptimizingLLVMforGPGPU.pdf)
 - cuda constant memory, see [cuda c programming guide](http://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html) and [blog](https://www.cnblogs.com/1024incn/p/4706215.html) and HPC Tech Tips:[cuda memory types performance comparison](https://www.microway.com/hpc-tech-tips/gpu-memory-types-performance-comparison/)
+- NVIDIA [compiler sdk](https://developer.nvidia.com/cuda-llvm-compiler#cudacompilersdk) see its official [page](http://docs.nvidia.com/cuda/index.html#compiler-sdk) and libNVVM see its github [repo](libNVVM examples)
