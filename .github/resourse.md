@@ -69,3 +69,4 @@ import tensorflow as tf
 - cuda constant memory, see [cuda c programming guide](http://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html) and [blog](https://www.cnblogs.com/1024incn/p/4706215.html) and HPC Tech Tips:[cuda memory types performance comparison](https://www.microway.com/hpc-tech-tips/gpu-memory-types-performance-comparison/)
 - NVIDIA [compiler sdk](https://developer.nvidia.com/cuda-llvm-compiler#cudacompilersdk) see its official [page](http://docs.nvidia.com/cuda/index.html#compiler-sdk) and libNVVM  examples see its github [repo](https://github.com/nvidia-compiler-sdk/nvvmir-samples)
 - ssh remote operation and port translation see this [blog](http://www.ruanyifeng.com/blog/2011/12/ssh_port_forwarding.html)
+- Most cited deep learning papers, checkout this github repo: <https://github.com/terryum/awesome-deep-learning-papers>
