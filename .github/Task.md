@@ -9,8 +9,8 @@
 - [x] TODO: learn to write an llvm backend by this [link](http://llvm.org/docs/WritingAnLLVMBackend.html); learn gpgpu compiler by this [link](http://llvm.org/docs/CompileCudaWithLLVM.html) and read the source code of faster-rcnn.
 - [x] TODO: review code gen basic concepts
 - [x] TODO: spare some efforts to write a blog about tensorflow XLA compilier
-- [ ] TODO: `blog or document the basic conecpts of deep learning` in github
-- [ ] TODO: research mxnet compiler tvm
+- [ ] ~~TODO: `blog or document the basic conecpts of deep learning` in github~~
+- [x] TODO: research mxnet compiler tvm
 - [ ] TODO: 争取毕业之前能够以演讲者的身份参加一次LLVM开发者大会，男人，加油！
 - [x] TODO: write built in functions for IO
 - [x] TODO: write built-in functions for scalar
@@ -80,3 +80,4 @@
 - 每次都会跟自己说，当你觉得不舒服的时候就是成长的时候！
 - [ ] TODO: Spare some effort in hacking into the source code of Caffe & Tensorflow from the perspective of `designing pattern`
 - [ ] TODO: focus on deep learning `memory optimization` tricks...
+- [ ] TODO: Implement a toy ndarray(tensor) lib which is similar to [Eigen](https://bitbucket.org/eigen/eigen/src/677c9f1577810e869f4f09881cabc3e503a810c1/unsupported/Eigen/CXX11/src/Tensor/README.md): <https://bitbucket.org/eigen/eigen/> and think how to apply them into Cambricon BANG.
