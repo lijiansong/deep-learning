@@ -71,3 +71,5 @@ import tensorflow as tf
 - ssh remote operation and port translation see this [blog](http://www.ruanyifeng.com/blog/2011/12/ssh_port_forwarding.html)
 - Most cited deep learning papers, checkout this github repo: <https://github.com/terryum/awesome-deep-learning-papers>
 - Eigen Tutorial, checkout this page: <http://eigen.tuxfamily.org/dox/GettingStarted.html>
+- Eigen Tensor README, checkout this page: <https://bitbucket.org/eigen/eigen/src/677c9f1577810e869f4f09881cabc3e503a810c1/unsupported/Eigen/CXX11/src/Tensor/README.md>
+- A lightweight template based cpp matrix library, checkout this github repo: <https://github.com/PX4/Matrix>
