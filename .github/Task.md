@@ -81,3 +81,4 @@
 - [ ] TODO: Spare some effort in hacking into the source code of Caffe & Tensorflow from the perspective of `designing pattern`
 - [ ] TODO: focus on deep learning `memory optimization` tricks...
 - [x] TODO: Implement a toy ndarray(tensor) lib by taking use of cpp features which is similar to [Eigen](https://bitbucket.org/eigen/eigen/src/677c9f1577810e869f4f09881cabc3e503a810c1/unsupported/Eigen/CXX11/src/Tensor/README.md): <https://bitbucket.org/eigen/eigen/> and think how to apply them into Cambricon BANG.
+- Tensor compiler checkout this GitHub repo: <https://github.com/tensor-compiler/taco>, and its [paper](http://tensor-compiler.org/kjolstad-oopsla17-tensor-compiler.pdf)
