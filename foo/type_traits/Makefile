@@ -1,7 +1,13 @@
+CXX := clang++
+CXX := g++
+
+CXX_FLAGS := -std=c++11
+
 foo: foo.o
-	g++ -std=c++11 -o $@ $+
+	$(CXX) -o $@ $+
 foo.o: foo.cpp
-	g++ -c $< -o $@
+	$(CXX) $(CXX_FLAGS) -c $< -I. -o $@
+
 clean:
 	@rm -f *.o
 	@rm -f foo

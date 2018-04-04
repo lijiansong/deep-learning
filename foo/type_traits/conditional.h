@@ -4,6 +4,7 @@
 namespace foo {
 
 // replace std::conditional
+template <bool, typename, typename> struct conditional;
 
 template <bool Cond, typename IfTrue, typename IfFalse> struct conditional {
   using type = IfFalse;
