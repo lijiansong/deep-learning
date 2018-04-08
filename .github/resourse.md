@@ -74,3 +74,4 @@ import tensorflow as tf
 - Eigen Tensor README, checkout this page: <https://bitbucket.org/eigen/eigen/src/677c9f1577810e869f4f09881cabc3e503a810c1/unsupported/Eigen/CXX11/src/Tensor/README.md>
 - A lightweight template based cpp matrix library, checkout this github repo: <https://github.com/PX4/Matrix>
 - IEEE 754, Half-precision floating-point format see this wiki page: <https://en.wikipedia.org/wiki/Half-precision_floating-point_format>
+- What Do We Understand About Convolutional Networks? see arxiv: <https://arxiv.org/pdf/1803.08834.pdf>
