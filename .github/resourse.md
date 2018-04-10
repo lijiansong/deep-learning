@@ -76,3 +76,4 @@ import tensorflow as tf
 - IEEE 754, Half-precision floating-point format see this wiki page: <https://en.wikipedia.org/wiki/Half-precision_floating-point_format>
 - What Do We Understand About Convolutional Networks? see arxiv: <https://arxiv.org/pdf/1803.08834.pdf>
 - Nvidia Hardware Documentation: <https://media.readthedocs.org/pdf/envytools/latest/envytools.pdf> 
+- Fermi GPU internals: <https://www.realworldtech.com/fermi/>
