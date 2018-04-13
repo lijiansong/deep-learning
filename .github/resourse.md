@@ -77,3 +77,6 @@ import tensorflow as tf
 - What Do We Understand About Convolutional Networks? see arxiv: <https://arxiv.org/pdf/1803.08834.pdf>
 - Nvidia Hardware Documentation: <https://media.readthedocs.org/pdf/envytools/latest/envytools.pdf> 
 - Fermi GPU internals: <https://www.realworldtech.com/fermi/>
+- GPU register allocation opt: <http://www1.coe.neu.edu/~ckalra/papers/ck_thesis.pdf>
+- Understanding Latency Hiding on GPUs: <https://www2.eecs.berkeley.edu/Pubs/TechRpts/2016/EECS-2016-143.pdf> 
+- CUDA cpp feature supporting list: <http://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#c-cplusplus-language-support>
