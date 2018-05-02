@@ -80,3 +80,5 @@ import tensorflow as tf
 - GPU register allocation opt: <http://www1.coe.neu.edu/~ckalra/papers/ck_thesis.pdf>
 - Understanding Latency Hiding on GPUs: <https://www2.eecs.berkeley.edu/Pubs/TechRpts/2016/EECS-2016-143.pdf> 
 - CUDA cpp feature supporting list: <http://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#c-cplusplus-language-support>
+- CuPy: A NumPy-Compatible Library for NVIDIA GPU Calculations <http://learningsys.org/nips17/assets/papers/paper_16.pdf>
+- cupy: <https://cupy.chainer.org> and consider the integration of Cambricon Bang similar to cupy.
