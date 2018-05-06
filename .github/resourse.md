@@ -82,3 +82,5 @@ import tensorflow as tf
 - CUDA cpp feature supporting list: <http://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#c-cplusplus-language-support>
 - CuPy: A NumPy-Compatible Library for NVIDIA GPU Calculations <http://learningsys.org/nips17/assets/papers/paper_16.pdf>
 - cupy: <https://cupy.chainer.org> and consider the integration of Cambricon Bang similar to cupy.
+- Paper reading, GPGPU13: Split tiling for GPUs: automatic parallelization using trapezoidal tiles, <http://grosser.es/bibliography/grosser2013split.html>
+- Paper reading, INRIA13: The Promises of Hybrid Hexagonal/Classical Tiling for GPU, <http://grosser.es/bibliography/grosser2013promises.html>
