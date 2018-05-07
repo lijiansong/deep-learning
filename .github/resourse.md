@@ -84,3 +84,4 @@ import tensorflow as tf
 - cupy: <https://cupy.chainer.org> and consider the integration of Cambricon Bang similar to cupy.
 - Paper reading, GPGPU13: Split tiling for GPUs: automatic parallelization using trapezoidal tiles, <http://grosser.es/bibliography/grosser2013split.html>
 - Paper reading, INRIA13: The Promises of Hybrid Hexagonal/Classical Tiling for GPU, <http://grosser.es/bibliography/grosser2013promises.html>
+- Memory Hierarchies and Optimizing Matrix Multiplication, checkout this slide: <https://people.eecs.berkeley.edu/~demmel/cs267_Spr99/Lectures/Lect_02_1999b.pdf>
