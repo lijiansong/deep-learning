@@ -86,3 +86,4 @@ import tensorflow as tf
 - Paper reading, INRIA13: The Promises of Hybrid Hexagonal/Classical Tiling for GPU, <http://grosser.es/bibliography/grosser2013promises.html>
 - Memory Hierarchies and Optimizing Matrix Multiplication, checkout this slide: <https://people.eecs.berkeley.edu/~demmel/cs267_Spr99/Lectures/Lect_02_1999b.pdf>
 - cuda stream, checkout this silde:<http://on-demand.gputechconf.com/gtc/2014/presentations/S4158-cuda-streams-best-practices-common-pitfalls.pdf> and this page: <https://devblogs.nvidia.com/gpu-pro-tip-cuda-7-streams-simplify-concurrency/>
+- faster r-cnn training: <http://mp7.watson.ibm.com/ICCV2015/slides/iccv15_tutorial_training_rbg.pdf>
