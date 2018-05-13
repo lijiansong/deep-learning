@@ -88,3 +88,5 @@ import tensorflow as tf
 - Memory Hierarchies and Optimizing Matrix Multiplication, checkout this slide: <https://people.eecs.berkeley.edu/~demmel/cs267_Spr99/Lectures/Lect_02_1999b.pdf>
 - cuda stream, checkout this silde:<http://on-demand.gputechconf.com/gtc/2014/presentations/S4158-cuda-streams-best-practices-common-pitfalls.pdf> and this page: <https://devblogs.nvidia.com/gpu-pro-tip-cuda-7-streams-simplify-concurrency/>
 - faster r-cnn training: <http://mp7.watson.ibm.com/ICCV2015/slides/iccv15_tutorial_training_rbg.pdf>
+- data transfer maters for gpu computing: <http://www.ertl.jp/~shinpei/papers/icpads13.pdf>
+- Set GPUs Free: Integrating a File System with CUDA Programs: <http://on-demand.gputechconf.com/gtc/2012/presentations/S0360-Set-GPUs-Free-Integrating-a-File-System-with-CUDA-Programs.pdf>
