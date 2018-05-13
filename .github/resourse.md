@@ -90,3 +90,5 @@ import tensorflow as tf
 - faster r-cnn training: <http://mp7.watson.ibm.com/ICCV2015/slides/iccv15_tutorial_training_rbg.pdf>
 - data transfer maters for gpu computing: <http://www.ertl.jp/~shinpei/papers/icpads13.pdf>
 - Set GPUs Free: Integrating a File System with CUDA Programs: <http://on-demand.gputechconf.com/gtc/2012/presentations/S0360-Set-GPUs-Free-Integrating-a-File-System-with-CUDA-Programs.pdf>
+- Accelerating Compute-Intensive Applications with GPUs and FPGAs: <https://ieeexplore.ieee.org/abstract/document/4570793/>
+- Coordinating the use of GPU and CPU for improving performance of compute intensive applications: <https://ieeexplore.ieee.org/abstract/document/5289193/>
