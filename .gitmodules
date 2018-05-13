@@ -1,0 +1,3 @@
+[submodule "tensor/ndarray"]
+	path = tensor/ndarray
+	url = git@github.com:lijiansong/ndarray.git
