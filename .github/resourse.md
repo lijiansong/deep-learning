@@ -13,6 +13,7 @@
 - [Understanding Convolution in Deep Learning](http://timdettmers.com/2015/03/26/convolution-deep-learning/)
 - Clang Internals, see [here](http://clang.llvm.org/docs/InternalsManual.html)
 - Clang driver internals, see [here](http://clang.llvm.org/docs/DriverInternals.html); [The Clang Universal Driver Project](https://clang.llvm.org/UniversalDriver.html) and LLVM IR details see [here](http://llvm.org/docs/LangRef.html), clang builtin function extensions, see [here](https://clang.llvm.org/docs/LanguageExtensions.html)
+- `Latex gallery`, checkout this site: <https://www.overleaf.com/gallery>
 - follow this guide to build example target LEG, doc see [here](https://llvm.org/devmtg/2014-04/PDFs/Talks/Building%20an%20LLVM%20backend.pdf)
 - what is ABI, see [here](http://www.princeton.edu/~achaney/tmve/wiki100k/docs/Application_binary_interface.html)
 - GAS-format assembly language, abt GAS see [here](http://asm.sourceforge.net/howto/gas.html)
