@@ -92,3 +92,5 @@ import tensorflow as tf
 - Set GPUs Free: Integrating a File System with CUDA Programs: <http://on-demand.gputechconf.com/gtc/2012/presentations/S0360-Set-GPUs-Free-Integrating-a-File-System-with-CUDA-Programs.pdf>
 - Accelerating Compute-Intensive Applications with GPUs and FPGAs: <https://ieeexplore.ieee.org/abstract/document/4570793/>
 - Coordinating the use of GPU and CPU for improving performance of compute intensive applications: <https://ieeexplore.ieee.org/abstract/document/5289193/>
+- A Survey on Compiler Autotuning using Machine Learning: <https://arxiv.org/pdf/1801.04405.pdf>
+- paper reading, The GPU on the Matrix-Matrix Multiply: Performance Study and Contributions, checkout this [page](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.484.2206&rep=rep1&type=pdf)
