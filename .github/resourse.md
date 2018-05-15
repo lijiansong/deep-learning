@@ -14,6 +14,7 @@
 - Clang Internals, see [here](http://clang.llvm.org/docs/InternalsManual.html)
 - Clang driver internals, see [here](http://clang.llvm.org/docs/DriverInternals.html); [The Clang Universal Driver Project](https://clang.llvm.org/UniversalDriver.html) and LLVM IR details see [here](http://llvm.org/docs/LangRef.html), clang builtin function extensions, see [here](https://clang.llvm.org/docs/LanguageExtensions.html)
 - `Latex gallery`, checkout this site: <https://www.overleaf.com/gallery>
+- cheat sheet for common tools, checkout this repo: <https://github.com/KevinsBobo/cheat-sheet>
 - follow this guide to build example target LEG, doc see [here](https://llvm.org/devmtg/2014-04/PDFs/Talks/Building%20an%20LLVM%20backend.pdf)
 - what is ABI, see [here](http://www.princeton.edu/~achaney/tmve/wiki100k/docs/Application_binary_interface.html)
 - GAS-format assembly language, abt GAS see [here](http://asm.sourceforge.net/howto/gas.html)
@@ -66,7 +67,7 @@ import tensorflow as tf
 - gnome, gdk-pixbuf utils, see this [page](https://developer.gnome.org/gdk-pixbuf/2.22/gdk-pixbuf-util.html)
 - DLVM, Modern Compiler Infrastructure for Deep Learning Systems, checkout this [page](http://dlvm.org/)
   - NIPS, short for Conference and Workshop on Neural Information Processing Systems, CCF A
-- gpucc: an open-source gpgpu compiler, see its llvm developer meeting [slides](http://llvm.org/devmtg/2015-10/slides/Wu-OptimizingLLVMforGPGPU.pdf)
+- gpucc: an open-source gpgpu compiler, see its llvm developer meeting [slides](http://llvm.org/devmtg/2015-10/slides/Wu-OptimizingLLVMforGPGPU.pdf) and its benchmark, Rodinia:Accelerating Compute-Intensive Applications with Accelerators, <https://www.cs.virginia.edu/~skadron/wiki/rodinia/index.php/Rodinia:Accelerating_Compute-Intensive_Applications_with_Accelerators> and shoc: <https://github.com/vetter/shoc>
 - cuda constant memory, see [cuda c programming guide](http://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html) and [blog](https://www.cnblogs.com/1024incn/p/4706215.html) and HPC Tech Tips:[cuda memory types performance comparison](https://www.microway.com/hpc-tech-tips/gpu-memory-types-performance-comparison/)
 - NVIDIA [compiler sdk](https://developer.nvidia.com/cuda-llvm-compiler#cudacompilersdk) see its official [page](http://docs.nvidia.com/cuda/index.html#compiler-sdk) and libNVVM  examples see its github [repo](https://github.com/nvidia-compiler-sdk/nvvmir-samples)
 - ssh remote operation and port translation see this [blog](http://www.ruanyifeng.com/blog/2011/12/ssh_port_forwarding.html)
@@ -94,3 +95,11 @@ import tensorflow as tf
 - Coordinating the use of GPU and CPU for improving performance of compute intensive applications: <https://ieeexplore.ieee.org/abstract/document/5289193/>
 - A Survey on Compiler Autotuning using Machine Learning: <https://arxiv.org/pdf/1801.04405.pdf>
 - paper reading, The GPU on the Matrix-Matrix Multiply: Performance Study and Contributions, checkout this [page](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.484.2206&rep=rep1&type=pdf)
+- tricks in optimize gpu mat-mul checkout this page: <http://www.es.ele.tue.nl/~mwijtvliet/5KK73/?page=mmcuda>
+- Improving Performance of Matrix Multiplication and FFT on GPU, see this [paper](http://sei.pku.edu.cn/~cyf/icpads09.pdf)
+- Performance Analysis of GPU Memory Architectures with Standard Matrix-Multiplication in OpenCL: checkout this [paper](https://pdfs.semanticscholar.org/31df/d69ca073b060e226f5759f0aa7a941e00190.pdf)
+- Boolean mat-mul checkout this slide: <http://www.desy.de/dvsem/SS10/okhotin_talk.pdf>
+- Cache and Bandwidth Aware Matrix Multiplication on the GPU, see this [paper](http://conteudo.icmc.usp.br/pessoas/castelo/CUDA/docs/cache-bandwidth-gpumatrixmult.pdf)
+- Benchmarking data and compute intensive applications on modern CPU and GPU architectures, see this [paper](https://ac.els-cdn.com/S1877050912003298/1-s2.0-S1877050912003298-main.pdf?_tid=4140e8d1-4993-4d99-9abd-8f17ca33ae56&acdnat=1526317476_d7d66d261dcf4dcc7190f8103e51e4a5)
+- Performance Evaluation and Optimization of HBM-Enabled GPU for Data-intensive Applications: <http://alchem.usc.edu/~youwei/publications/2017.date.pdf>
+- [ ] TODO: book reading, <Algorithms Sequential and Parallel>
