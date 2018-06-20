@@ -23,6 +23,8 @@ Time is measured in micro seconds(/ms).
 | Loop unrolling GPU |0.02928	|0.034112	|0.077856|	0.15696|	0.27984|	1.37568|	7.900992|	32.115841	|230.839005|	1791.019653|	13986.36426|
 | Prefetching GPU |0.02848|	0.034176|	0.076896|	0.153792|	0.284896|	1.370784|	7.272704|	31.888	|227.607361|	1761.708496|	13743.58008|
 
+- [ ] TODO: Blog the method later.
+
 # REF
 - NVIDIA SDK Examples
 - The GPU on the Matrix-Matrix Multiply: Performance Study and Contributions, <http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.484.2206&rep=rep1&type=pdf>
