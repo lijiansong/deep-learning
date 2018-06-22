@@ -4,3 +4,6 @@
 [submodule "compiler/umm_malloc"]
 	path = compiler/umm_malloc
 	url = https://github.com/dimonomid/umm_malloc.git
+[submodule "tensor/xtensor"]
+	path = tensor/xtensor
+	url = https://github.com/QuantStack/xtensor.git
