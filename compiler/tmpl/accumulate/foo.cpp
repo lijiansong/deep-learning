@@ -12,7 +12,7 @@ int main() {
   int sum = std::accumulate(v.begin(), v.end(), 0);
   int _sum = foo::accumulate(v.begin(), v.end(), 0);
 
-  int product = std::accumulate(v.begin(), v.end(), 1, std::multiplies<int>());
+  int product = std::accumulate(v.begin() + 8, v.end(), 1, std::multiplies<int>());
   int _product = std::accumulate(v.end(), v.end(), 1, std::multiplies<int>());
 
   std::string s = std::accumulate(
@@ -32,4 +32,7 @@ int main() {
   std::cout << "_sum: " << _sum << '\n'
             << "_product: " << _product << '\n'
             << "dash-separated string: " << _s << '\n';
+  std::vector<int> _v{1, 2, 3};
+  product = std::accumulate(_v.begin() + 2, _v.end(), 1, std::multiplies<int>());
+  std::cout << product << std::endl;
 }
