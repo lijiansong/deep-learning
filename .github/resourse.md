@@ -103,3 +103,4 @@ import tensorflow as tf
 - Benchmarking data and compute intensive applications on modern CPU and GPU architectures, see this [paper](https://ac.els-cdn.com/S1877050912003298/1-s2.0-S1877050912003298-main.pdf?_tid=4140e8d1-4993-4d99-9abd-8f17ca33ae56&acdnat=1526317476_d7d66d261dcf4dcc7190f8103e51e4a5)
 - Performance Evaluation and Optimization of HBM-Enabled GPU for Data-intensive Applications: <http://alchem.usc.edu/~youwei/publications/2017.date.pdf>
 - [ ] TODO: book reading, <Algorithms Sequential and Parallel>
+- Search with [DuckDuckGo](https://duckduckgo.com/)...
