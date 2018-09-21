@@ -1,4 +1,5 @@
 all:
 	g++ lazy-eval.cpp -o lazy -std=c++11
+	g++ lazy-eval-tmpl.cpp -o tmpl -std=c++11
 clean:
-	@rm -f lazy
+	@rm -f lazy tmpl

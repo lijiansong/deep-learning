@@ -38,4 +38,6 @@ struct AddOp {
   int get_y() const { return lhs.get_y() + rhs.get_y(); }
 };
 
-int main() { return 0; }
+int main() {
+  return 0;
+}
