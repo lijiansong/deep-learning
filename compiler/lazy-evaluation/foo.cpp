@@ -1,43 +1,52 @@
+// lazy eval
 #include <iostream>
+#include <ostream>
 
-struct Point {
-  int x, y;
+struct Vec;
 
-  Point(int x = 0, int y = 0) : x(x), y(y) {}
+struct BinaryAddExp {
+  BinaryAddExp(const Vec &lhs, const Vec &rhs) : lhs(lhs), rhs(rhs) {}
+  const Vec &lhs;
+  const Vec &rhs;
+};
 
-  template <typename LHS, typename RHS>
-  Point(AddOp<LHS, RHS> const &op) {
-    x = op.get_x();
-    y = op.get_y();
-  }
+struct Vec {
+  constexpr int size() const { return len; }
 
-  template <typename LHS, typename RHS>
-  Point &operator=(AddOp<LHS, RHS> const &op) {
-    x = op.get_x();
-    y = op.get_y();
+  Vec(void) {}
+
+  Vec(float *dptr, int len) : len(len), dptr(dptr) {}
+
+  inline Vec &operator=(const BinaryAddExp &src) {
+    for (int i = 0; i < len; ++i) {
+      dptr[i] = src.lhs.dptr[i] + src.rhs.dptr[i];
+    }
     return *this;
   }
 
-  int get_x() const { return x; }
-  int get_y() const { return y; }
+  int len;
+  float *dptr;
 };
 
-template <typename LHS, typename RHS>
-struct AddOp {
-  LHS const &lhs;
-  RHS const &rhs;
+inline BinaryAddExp operator+(const Vec &lhs, const Vec &rhs) {
+  return BinaryAddExp(lhs, rhs);
+}
 
-  AddOp(LHS const &lhs, RHS const &rhs) : lhs(lhs), rhs(rhs) {
-    // empty body
+std::ostream &operator<<(std::ostream &os, const Vec &x) {
+  for (size_t i = 0; i < x.size(); ++i) {
+    os << x.dptr[i] << " ";
   }
+  os << '\n';
+  return os;
+}
 
-  LHS const &get_lhs() const { return lhs; }
-  RHS const &get_rhs() const { return rhs; }
-
-  int get_x() const { return lhs.get_x() + rhs.get_x(); }
-  int get_y() const { return lhs.get_y() + rhs.get_y(); }
-};
-
-int main() {
+int main(void) {
+  const int n = 3;
+  float sa[n] = {1, 2, 3};
+  float sb[n] = {2, 3, 4};
+  float sc[n] = {3, 4, 5};
+  Vec A(sa, n), B(sb, n), C(sc, n);
+  A = B + C;
+  std::cout << A;
   return 0;
 }

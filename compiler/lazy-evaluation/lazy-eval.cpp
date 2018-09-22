@@ -1,19 +1,25 @@
+// cpp expression tmpl
+//
 #include <iostream>
 using namespace std;
 
 template <typename A>
 class Expr {
-  A a_;
 public:
   Expr(const A &x = A()) : a_(x) {}
   float operator()(float x) const { return a_(x); }
+
+private:
+  A a_;
 };
 
 class ExprLiteral {
-  float value_;
 public:
   ExprLiteral(float value) : value_(value) {}
   float operator()(float x) const { return value_; }
+
+private:
+  float value_;
 };
 
 class Add {
@@ -28,19 +34,23 @@ public:
 
 template <typename A, typename B, typename Op>
 class BinaryExprOp {
-  A a_;
-  B b_;
 public:
   BinaryExprOp(const A &a, const B &b) : a_(a), b_(b) {}
   float operator()(float x) const { return Op::apply(a_(x), b_(x)); }
+
+private:
+  A a_;
+  B b_;
 };
 
 template <typename A, typename Op>
 class UnaryExprOp {
-  A a_;
 public:
   UnaryExprOp(const A &a) : a_(a) {}
   float operator()(float x) const { return Op::apply(a_(x)); }
+
+private:
+  A a_;
 };
 
 template <typename A>
@@ -93,7 +103,7 @@ class ExprId {
 public:
   float operator()(float x) const { return x; }
 };
-typedef Expr<ExprId> PlaceHolder_t;
+using PlaceHolder_t = Expr<ExprId>;
 
 int main() {
   PlaceHolder_t x;
