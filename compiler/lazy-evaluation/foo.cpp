@@ -11,11 +11,9 @@ struct BinaryAddExp {
 };
 
 struct Vec {
-  constexpr int size() const { return len; }
-
-  Vec(void) {}
-
+  Vec() {}
   Vec(float *dptr, int len) : len(len), dptr(dptr) {}
+  constexpr int size() const { return len; }
 
   inline Vec &operator=(const BinaryAddExp &src) {
     for (int i = 0; i < len; ++i) {
@@ -33,14 +31,14 @@ inline BinaryAddExp operator+(const Vec &lhs, const Vec &rhs) {
 }
 
 std::ostream &operator<<(std::ostream &os, const Vec &x) {
-  for (size_t i = 0; i < x.size(); ++i) {
+  for (int i = 0; i < x.size(); ++i) {
     os << x.dptr[i] << " ";
   }
   os << '\n';
   return os;
 }
 
-int main(void) {
+int main() {
   const int n = 3;
   float sa[n] = {1, 2, 3};
   float sb[n] = {2, 3, 4};
