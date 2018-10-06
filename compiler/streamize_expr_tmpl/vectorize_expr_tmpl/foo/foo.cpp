@@ -1,6 +1,6 @@
-#include "vectorize.h"
+#include "foo.h"
 #include <iostream>
-using namespace vectorize;
+using namespace cn;
 
 void add2_byhand(unsigned n, const float *src1, const float *src2, float *dst) {
   for (; n >= 4; n -= 4, src1 += 4, src2 += 4, dst += 4) {
@@ -25,8 +25,8 @@ void show(unsigned n, float *dst) {
 
 void gen(unsigned n, float *src1, float *src2) {
   for (unsigned i = 0; i < n; ++i) {
-    src1[i] = 1.f;
-    src2[i] = 2.f;
+    src1[i] = i % n;
+    src2[i] = i % n;
   }
 }
 

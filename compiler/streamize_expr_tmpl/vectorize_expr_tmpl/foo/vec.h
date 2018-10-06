@@ -4,7 +4,70 @@
 #include <cmath>
 #include <algorithm>
 
-namespace vectorize {
+#define CACHE_SIZE 1024
+
+namespace cn {
+
+template <typename T, int N>
+struct Vector {
+  //Vector() {}
+  Vector(T *data) : _data(data) {}
+  constexpr int size() const { return N; }
+
+  //inline Vec &operator=(const BinaryAddExp &src) {
+  //  for (int i = 0; i < len; ++i) {
+  //    _data[i] = src.lhs.data[i] + src.rhs.data[i];
+  //  }
+  //  return *this;
+  //}
+
+  T *_data;
+};
+
+using __vf1024 = Vector<float, 1024>;
+
+__vf1024 __vec_fadd(__vf1024 &x, __vf1024 &y) {
+  float res[1024];
+  for(int i = 0; i < 1024; ++i) {
+    res[i] = x.data[i] + y.data[i];
+  }
+  return __vf1024(res);
+}
+__vf1024 __vec_fsub(__vf1024 &x, __vf1024 &y) {
+  float res[1024];
+  for(int i = 0; i < 1024; ++i) {
+    res[i] = x.data[i] - y.data[i];
+  }
+  return __vf1024(res);
+}
+__vf1024 __vec_fmul(__vf1024 &x, __vf1024 &y) {
+  float res[1024];
+  for(int i = 0; i < 1024; ++i) {
+    res[i] = x.data[i] * y.data[i];
+  }
+  return __vf1024(res);
+}
+__vf1024 __vec_fmin(__vf1024 &x, __vf1024 &y) {
+  float res[1024];
+  for(int i = 0; i < 1024; ++i) {
+    res[i] = std::min(x.data[i], y.data[i]);
+  }
+  return __vf1024(res);
+}
+__vf1024 __vec_fmax(__vf1024 &x, __vf1024 &y) {
+  float res[1024];
+  for(int i = 0; i < 1024; ++i) {
+    res[i] = std::max(x.data[i], y.data[i]);
+  }
+  return __vf1024(res);
+}
+__vf1024 __vec_fset(float value) {
+  float res[1024];
+  for(int i = 0; i < 1024; ++i) {
+    res[i] = value;
+  }
+  return __vf1024(res);
+}
 
   template <unsigned N>
   struct Placeholder {
@@ -29,12 +92,12 @@ namespace vectorize {
     float _value;
   };
 
-  template <class L, class R, class Op>
+  template <typename L, typename R, typename Op>
   class BinOp {
   public:
     BinOp(const L& l, const R& r) : _l(l), _r(r) {}
 
-    template <class T, unsigned N>
+    template <typename T, unsigned N>
     T apply(T (&x)[N]) const {
       return Op::eval(_l.apply(x), _r.apply(x));
     }
@@ -88,7 +151,7 @@ namespace vectorize {
     }
   };
 
-  template <class T>
+  template <typename T>
   class Expr {
   public:
     Expr(const T& t) : _t(t) {}
@@ -142,7 +205,7 @@ namespace vectorize {
 
 #undef GENERATE_BINARY_OPERATOR
 
-  template <class T, class Op>
+  template <typename T, typename Op>
   class UnaryOp {
   public:
     UnaryOp(const T& t) : _t(t) {}
@@ -181,7 +244,7 @@ namespace vectorize {
   // the user calls, i.e. abs or sqrt. UnOpClass is the expression
   // template class that implements the operator.
 #define GENERATE_UNARY_OPERATOR(OpFunction, UnOpClass)              \
-  template <class T>                                                \
+  template <typename T>                                             \
   Expr<UnaryOp<Expr<T>, UnOpClass>> OpFunction(const Expr<T>& t) {  \
     typedef UnaryOp<Expr<T>, UnOpClass> unop_type;                  \
     return Expr<unop_type>(unop_type(t));                           \
@@ -192,7 +255,7 @@ namespace vectorize {
 
 #undef GENERATE_UNARY_OPERATOR
 
-  template <class F>
+  template <typename F>
   void apply(unsigned n, const float* src, float* target, F f) {
     for (; n>=4; n-=4, src+=4, target+=4) {
       __m128 x[]= { _mm_load_ps(src) };
@@ -205,7 +268,7 @@ namespace vectorize {
     }
   }
 
-  template <class F>
+  template <typename F>
   void apply2(unsigned n, const float* src1, const float* src2,
               float* target, F f) {
     for (; n>=4; n-=4, src1+=4, src2+=4, target+=4) {
@@ -218,5 +281,5 @@ namespace vectorize {
       *target= f.apply(x);
     }
   }
-}
+} // end of namespace cn
 
