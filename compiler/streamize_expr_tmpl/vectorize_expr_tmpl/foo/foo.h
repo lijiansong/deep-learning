@@ -116,20 +116,20 @@ namespace cn {
   template <class L, class R>                                         \
   Expr<BinOp<Expr<L>, Expr<R>, BinOpClass>>                           \
   OpFunction(const Expr<L>& l, const Expr<R>& r) {                    \
-    typedef BinOp<Expr<L>, Expr<R>, BinOpClass> binop_type;           \
+    using binop_type = BinOp<Expr<L>, Expr<R>, BinOpClass>;           \
     return Expr<binop_type>(binop_type(l, r));                        \
   }                                                                   \
   template <class L>                                                  \
   Expr<BinOp<Expr<L>, Expr<Constant>, BinOpClass>>                    \
   OpFunction(const Expr<L>& l, float r) {                             \
-    typedef BinOp<Expr<L>, Expr<Constant>, BinOpClass> binop_type;    \
+    using binop_type = BinOp<Expr<L>, Expr<Constant>, BinOpClass>;    \
     Expr<Constant> c= Constant(r);                                    \
     return Expr<binop_type>(binop_type(l, c));                        \
   }                                                                   \
   template <class R>                                                  \
   Expr<BinOp<Expr<Constant>, Expr<R>, BinOpClass>>                    \
   OpFunction(float l, const Expr<R>& r) {                             \
-    typedef BinOp<Expr<Constant>, Expr<R>, BinOpClass> binop_type;    \
+    using binop_type = BinOp<Expr<Constant>, Expr<R>, BinOpClass>;    \
     Expr<Constant> c= Constant(l);                                    \
     return Expr<binop_type>(binop_type(c, r));                        \
   }                                                                   \
@@ -183,7 +183,7 @@ namespace cn {
 #define GENERATE_UNARY_OPERATOR(OpFunction, UnOpClass)              \
   template <class T>                                                \
   Expr<UnaryOp<Expr<T>, UnOpClass>> OpFunction(const Expr<T>& t) {  \
-    typedef UnaryOp<Expr<T>, UnOpClass> unop_type;                  \
+    using unop_type = UnaryOp<Expr<T>, UnOpClass>;                  \
     return Expr<unop_type>(unop_type(t));                           \
   }
 

@@ -14,7 +14,7 @@ struct Vector {
   Vector(T *data) : _data(data) {}
   constexpr int size() const { return N; }
 
-  //inline Vec &operator=(const BinaryAddExp &src) {
+  //inline Vector &operator=(const BinaryAddExp &src) {
   //  for (int i = 0; i < len; ++i) {
   //    _data[i] = src.lhs.data[i] + src.rhs.data[i];
   //  }
@@ -26,40 +26,66 @@ struct Vector {
 
 using __vf1024 = Vector<float, 1024>;
 
-__vf1024 __vec_fadd(__vf1024 &x, __vf1024 &y) {
+__vf1024 __vec_fadd(const __vf1024 &x, const __vf1024 &y) {
   float res[1024];
   for(int i = 0; i < 1024; ++i) {
-    res[i] = x.data[i] + y.data[i];
+    res[i] = x._data[i] + y._data[i];
   }
   return __vf1024(res);
 }
 __vf1024 __vec_fsub(__vf1024 &x, __vf1024 &y) {
   float res[1024];
   for(int i = 0; i < 1024; ++i) {
-    res[i] = x.data[i] - y.data[i];
+    res[i] = x._data[i] - y._data[i];
   }
   return __vf1024(res);
 }
 __vf1024 __vec_fmul(__vf1024 &x, __vf1024 &y) {
   float res[1024];
   for(int i = 0; i < 1024; ++i) {
-    res[i] = x.data[i] * y.data[i];
+    res[i] = x._data[i] * y._data[i];
   }
   return __vf1024(res);
 }
 __vf1024 __vec_fmin(__vf1024 &x, __vf1024 &y) {
   float res[1024];
   for(int i = 0; i < 1024; ++i) {
-    res[i] = std::min(x.data[i], y.data[i]);
+    res[i] = std::min(x._data[i], y._data[i]);
   }
   return __vf1024(res);
 }
 __vf1024 __vec_fmax(__vf1024 &x, __vf1024 &y) {
   float res[1024];
   for(int i = 0; i < 1024; ++i) {
-    res[i] = std::max(x.data[i], y.data[i]);
+    res[i] = std::max(x._data[i], y._data[i]);
   }
   return __vf1024(res);
+}
+__vf1024 __vec_fabs(__vf1024 &x) {
+  float res[1024];
+  for(int i = 0; i < 1024; ++i) {
+    res[i] = std::abs(x._data[i]);
+  }
+  return __vf1024(res);
+}
+__vf1024 __vec_fsqrt(__vf1024 &x) {
+  float res[1024];
+  for(int i = 0; i < 1024; ++i) {
+    res[i] = std::sqrt(x._data[i]);
+  }
+  return __vf1024(res);
+}
+__vf1024 __vec_fload(const float *src) {
+  float res[1024];
+  for(int i = 0; i < 1024; ++i) {
+    res[i] = src[i];
+  }
+  return __vf1024(res);
+}
+void __vec_fstore(float *dst, const __vf1024 &x) {
+  for(int i = 0; i < 1024; ++i) {
+    dst[i] = x._data[i];
+  }
 }
 __vf1024 __vec_fset(float value) {
   float res[1024];
@@ -85,7 +111,7 @@ __vf1024 __vec_fset(float value) {
   public:
     Constant(float value) : _value(value) {}
     template <unsigned N>
-    __m128 apply(__m128(&)[N]) const { return _mm_set1_ps(_value); }
+    __vf1024 apply(__vf1024(&)[N]) const { return __vec_fset(_value); }
     template <unsigned N>
     float apply(float(&)[N]) const { return _value; }
   private:
@@ -107,8 +133,8 @@ __vf1024 __vec_fset(float value) {
   };
 
   struct AddOp {
-    static __m128 eval(__m128 x, __m128 y) {
-      return _mm_add_ps(x, y);
+    static __vf1024 eval(__vf1024 x, __vf1024 y) {
+      return __vec_fadd(x, y);
     }
     static float eval(float x, float y) {
       return x + y;
@@ -116,8 +142,8 @@ __vf1024 __vec_fset(float value) {
   };
 
   struct SubOp {
-    static __m128 eval(__m128 x, __m128 y) {
-      return _mm_sub_ps(x, y);
+    static __vf1024 eval(__vf1024 x, __vf1024 y) {
+      return __vec_fsub(x, y);
     }
     static float eval(float x, float y) {
       return x - y;
@@ -125,8 +151,8 @@ __vf1024 __vec_fset(float value) {
   };
 
   struct MulOp {
-    static __m128 eval(__m128 x, __m128 y) {
-      return _mm_mul_ps(x, y);
+    static __vf1024 eval(__vf1024 x, __vf1024 y) {
+      return __vec_fmul(x, y);
     }
     static float eval(float x, float y) {
       return x * y;
@@ -134,8 +160,8 @@ __vf1024 __vec_fset(float value) {
   };
 
   struct MaxOp {
-    static __m128 eval(__m128 x, __m128 y) {
-      return _mm_max_ps(x, y);
+    static __vf1024 eval(__vf1024 x, __vf1024 y) {
+      return __vec_fmax(x, y);
     }
     static float eval(float x, float y) {
       return std::max(x, y);
@@ -143,8 +169,8 @@ __vf1024 __vec_fset(float value) {
   };
 
   struct MinOp {
-    static __m128 eval(__m128 x, __m128 y) {
-      return _mm_min_ps(x, y);
+    static __vf1024 eval(__vf1024 x, __vf1024 y) {
+      return __vec_fmin(x, y);
     }
     static float eval(float x, float y) {
       return std::min(x, y);
@@ -158,7 +184,7 @@ __vf1024 __vec_fset(float value) {
     Expr() : _t() {}
 
     template <unsigned N>
-    __m128 apply(__m128 (&x)[N]) const {
+    __vf1024 apply(__vf1024 (&x)[N]) const {
       return _t.apply(x);
     }
     template <unsigned N>
@@ -179,20 +205,20 @@ __vf1024 __vec_fset(float value) {
   template <class L, class R>                                         \
   Expr<BinOp<Expr<L>, Expr<R>, BinOpClass>>                           \
   OpFunction(const Expr<L>& l, const Expr<R>& r) {                    \
-    typedef BinOp<Expr<L>, Expr<R>, BinOpClass> binop_type;           \
+    using binop_type = BinOp<Expr<L>, Expr<R>, BinOpClass>;           \
     return Expr<binop_type>(binop_type(l, r));                        \
   }                                                                   \
   template <class L>                                                  \
   Expr<BinOp<Expr<L>, Expr<Constant>, BinOpClass>>                    \
   OpFunction(const Expr<L>& l, float r) {                             \
-    typedef BinOp<Expr<L>, Expr<Constant>, BinOpClass> binop_type;    \
+    using binop_type = BinOp<Expr<L>, Expr<Constant>, BinOpClass>;    \
     Expr<Constant> c= Constant(r);                                    \
     return Expr<binop_type>(binop_type(l, c));                        \
   }                                                                   \
   template <class R>                                                  \
   Expr<BinOp<Expr<Constant>, Expr<R>, BinOpClass>>                    \
   OpFunction(float l, const Expr<R>& r) {                             \
-    typedef BinOp<Expr<Constant>, Expr<R>, BinOpClass> binop_type;    \
+    using binop_type = BinOp<Expr<Constant>, Expr<R>, BinOpClass>;    \
     Expr<Constant> c= Constant(l);                                    \
     return Expr<binop_type>(binop_type(c, r));                        \
   }                                                                   \
@@ -211,7 +237,7 @@ __vf1024 __vec_fset(float value) {
     UnaryOp(const T& t) : _t(t) {}
 
     template <unsigned N>
-    __m128 apply(__m128 (&x)[N]) const {
+    __vf1024 apply(__vf1024 (&x)[N]) const {
       return Op::eval(_t.apply(x));
     }
     template <unsigned N>
@@ -223,8 +249,8 @@ __vf1024 __vec_fset(float value) {
   };
 
   struct AbsOp {
-    static __m128 eval(__m128 x) {
-      return _mm_andnot_ps(_mm_set1_ps(-0.0f), x);
+    static __vf1024 eval(__vf1024 x) {
+      return __vec_fabs(x);
     }
     static float eval(float x) {
       return std::abs(x);
@@ -232,8 +258,8 @@ __vf1024 __vec_fset(float value) {
   };
 
   struct SqrtOp {
-    static __m128 eval(__m128 x) {
-      return _mm_sqrt_ps(x);
+    static __vf1024 eval(__vf1024 x) {
+      return __vec_fsqrt(x);
     }
     static float eval(float x) {
       return std::sqrt(x);
@@ -246,7 +272,7 @@ __vf1024 __vec_fset(float value) {
 #define GENERATE_UNARY_OPERATOR(OpFunction, UnOpClass)              \
   template <typename T>                                             \
   Expr<UnaryOp<Expr<T>, UnOpClass>> OpFunction(const Expr<T>& t) {  \
-    typedef UnaryOp<Expr<T>, UnOpClass> unop_type;                  \
+    using unop_type = UnaryOp<Expr<T>, UnOpClass>;                  \
     return Expr<unop_type>(unop_type(t));                           \
   }
 
@@ -257,9 +283,9 @@ __vf1024 __vec_fset(float value) {
 
   template <typename F>
   void apply(unsigned n, const float* src, float* target, F f) {
-    for (; n>=4; n-=4, src+=4, target+=4) {
-      __m128 x[]= { _mm_load_ps(src) };
-      _mm_store_ps(target, f.apply(x));
+    for (; n>=1024; n-=1024, src+=1024, target+=1024) {
+      __vf1024 x[]= { __vec_fload(src) };
+      __vec_fstore(target, f.apply(x));
     }
 
     for (; n>0; --n, ++src, ++target) {
@@ -271,9 +297,9 @@ __vf1024 __vec_fset(float value) {
   template <typename F>
   void apply2(unsigned n, const float* src1, const float* src2,
               float* target, F f) {
-    for (; n>=4; n-=4, src1+=4, src2+=4, target+=4) {
-      __m128 x[]= { _mm_load_ps(src1), _mm_load_ps(src2) };
-      _mm_store_ps(target, f.apply(x));
+    for (; n>=1024; n-=1024, src1+=1024, src2+=1024, target+=1024) {
+      __vf1024 x[]= { __vec_fload(src1), __vec_fload(src2) };
+      __vec_fstore(target, f.apply(x));
     }
 
     for (; n>0; --n, ++src1, ++src2, ++target) {
