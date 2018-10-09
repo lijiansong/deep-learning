@@ -1,0 +1,265 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ARITHMETIC_ARRAY_CREATE_BINARY	arrr.hpp	/^    #define ARITHMETIC_ARRAY_CREATE_BINARY(/;"	d
+ARITHMETIC_ARRAY_CREATE_BINARY	arrr.hpp	/^    #undef ARITHMETIC_ARRAY_CREATE_BINARY$/;"	d
+ARITHMETIC_ARRAY_CREATE_UNARY	arrr.hpp	/^    #define ARITHMETIC_ARRAY_CREATE_UNARY(/;"	d
+ARITHMETIC_ARRAY_CREATE_UNARY	arrr.hpp	/^    #undef ARITHMETIC_ARRAY_CREATE_UNARY$/;"	d
+ARRR_ALIGN	arrr.hpp	/^    #define ARRR_ALIGN(/;"	d
+ARRR_ALIGN	arrr.hpp	/^    #undef ARRR_ALIGN$/;"	d
+ARRR_HPP	arrr.hpp	/^#define ARRR_HPP$/;"	d
+alignment	instruction_sets.hpp	/^    static const size_t alignment = 16;$/;"	m	struct:scalar_instruction_set
+alignment	instruction_sets.hpp	/^    static const size_t alignment = 16;$/;"	m	struct:vector_instruction_set
+alignment	instruction_sets.hpp	/^    static const size_t alignment = 32;$/;"	m	struct:vector_instruction_set
+arithmetic_array	arrr.hpp	/^        explicit arithmetic_array(T val = T()) {$/;"	f	class:arrr::arithmetic_array
+arithmetic_array	arrr.hpp	/^        explicit arithmetic_array(size_t size, T val = T())$/;"	f	class:arrr::arithmetic_array
+arithmetic_array	arrr.hpp	/^    class arithmetic_array {$/;"	c	namespace:arrr
+arithmetic_array	arrr.hpp	/^    class arithmetic_array<T,0> {$/;"	c	namespace:arrr
+array_eval_t	arrr.hpp	/^    struct array_eval_t {$/;"	s	namespace:arrr
+array_eval_t	arrr.hpp	/^    struct array_eval_t<const arithmetic_array<T1,N>&,U,model> {$/;"	s	namespace:arrr
+array_eval_t	arrr.hpp	/^    struct array_eval_t<std::tuple<store_tag, T1, T2>,U,model> {$/;"	s	namespace:arrr
+array_eval_t	arrr.hpp	/^    struct array_eval_t<std::tuple<tag, T1, T2>,U,model> {$/;"	s	namespace:arrr
+array_eval_t	arrr.hpp	/^    struct array_eval_t<std::tuple<tag, T1>,U,model> {$/;"	s	namespace:arrr
+arrr	arrr.hpp	/^namespace arrr {$/;"	n
+begin	arrr.hpp	/^        const_iterator begin() const { return data_.get(); }$/;"	f	class:arrr::arithmetic_array
+begin	arrr.hpp	/^        const_iterator begin() const { return data_; }$/;"	f	class:arrr::arithmetic_array
+begin	arrr.hpp	/^        iterator begin() { return data_.get(); }$/;"	f	class:arrr::arithmetic_array
+begin	arrr.hpp	/^        iterator begin() { return data_; }$/;"	f	class:arrr::arithmetic_array
+binary	instruction_sets.hpp	/^    static pack_type binary(pack_type a, pack_type b) { return binary_op<pack_type,tag>()(a,b); }$/;"	f	struct:scalar_instruction_set
+binary	instruction_sets.hpp	/^    static pack_type binary(pack_type a, pack_type b) { return binary_op<pack_type,tag>()(a,b); }$/;"	f	struct:vector_instruction_set
+binary_op	instruction_sets.hpp	/^    template<typename T2, typename tag> struct binary_op { };$/;"	s	struct:scalar_instruction_set
+binary_op	instruction_sets.hpp	/^    template<typename T2, typename tag> struct binary_op { };$/;"	s	struct:vector_instruction_set
+binary_op	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,add_tag> { T2 operator()(T2 a, T2 b) { return _mm256_add_pd(a, b); } };$/;"	s	struct:vector_instruction_set
+binary_op	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,add_tag> { T2 operator()(T2 a, T2 b) { return _mm256_add_ps(a, b); } };$/;"	s	struct:vector_instruction_set
+binary_op	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,add_tag> { T2 operator()(T2 a, T2 b) { return _mm_add_pd(a, b); } };$/;"	s	struct:vector_instruction_set
+binary_op	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,add_tag> { T2 operator()(T2 a, T2 b) { return _mm_add_ps(a, b); } };$/;"	s	struct:vector_instruction_set
+binary_op	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,add_tag> { T2 operator()(T2 a, T2 b) { return a+b; } };$/;"	s	struct:scalar_instruction_set
+binary_op	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,div_tag> { T2 operator()(T2 a, T2 b) { return _mm256_div_pd(a, b); } };$/;"	s	struct:vector_instruction_set
+binary_op	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,div_tag> { T2 operator()(T2 a, T2 b) { return _mm256_div_ps(a, b); } };$/;"	s	struct:vector_instruction_set
+binary_op	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,div_tag> { T2 operator()(T2 a, T2 b) { return _mm_div_pd(a, b); } };$/;"	s	struct:vector_instruction_set
+binary_op	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,div_tag> { T2 operator()(T2 a, T2 b) { return _mm_div_ps(a, b); } };$/;"	s	struct:vector_instruction_set
+binary_op	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,div_tag> { T2 operator()(T2 a, T2 b) { return a\/b; } };$/;"	s	struct:scalar_instruction_set
+binary_op	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,max_tag> { T2 operator()(T2 a, T2 b) { return _mm256_max_pd(a, b); } };$/;"	s	struct:vector_instruction_set
+binary_op	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,max_tag> { T2 operator()(T2 a, T2 b) { return _mm256_max_ps(a, b); } };$/;"	s	struct:vector_instruction_set
+binary_op	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,max_tag> { T2 operator()(T2 a, T2 b) { return _mm_max_pd(a, b); } };$/;"	s	struct:vector_instruction_set
+binary_op	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,max_tag> { T2 operator()(T2 a, T2 b) { return _mm_max_ps(a, b); } };$/;"	s	struct:vector_instruction_set
+binary_op	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,max_tag> { T2 operator()(T2 a, T2 b) { return a>b?a:b; } };$/;"	s	struct:scalar_instruction_set
+binary_op	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,min_tag> { T2 operator()(T2 a, T2 b) { return _mm256_min_pd(a, b); } };$/;"	s	struct:vector_instruction_set
+binary_op	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,min_tag> { T2 operator()(T2 a, T2 b) { return _mm256_min_ps(a, b); } };$/;"	s	struct:vector_instruction_set
+binary_op	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,min_tag> { T2 operator()(T2 a, T2 b) { return _mm_min_pd(a, b); } };$/;"	s	struct:vector_instruction_set
+binary_op	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,min_tag> { T2 operator()(T2 a, T2 b) { return _mm_min_ps(a, b); } };$/;"	s	struct:vector_instruction_set
+binary_op	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,min_tag> { T2 operator()(T2 a, T2 b) { return a<b?a:b; } };$/;"	s	struct:scalar_instruction_set
+binary_op	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,mul_tag> { T2 operator()(T2 a, T2 b) { return _mm256_mul_pd(a, b); } };$/;"	s	struct:vector_instruction_set
+binary_op	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,mul_tag> { T2 operator()(T2 a, T2 b) { return _mm256_mul_ps(a, b); } };$/;"	s	struct:vector_instruction_set
+binary_op	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,mul_tag> { T2 operator()(T2 a, T2 b) { return _mm_mul_pd(a, b); } };$/;"	s	struct:vector_instruction_set
+binary_op	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,mul_tag> { T2 operator()(T2 a, T2 b) { return _mm_mul_ps(a, b); } };$/;"	s	struct:vector_instruction_set
+binary_op	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,mul_tag> { T2 operator()(T2 a, T2 b) { return a*b; } };$/;"	s	struct:scalar_instruction_set
+binary_op	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,sub_tag> { T2 operator()(T2 a, T2 b) { return _mm256_sub_pd(a, b); } };$/;"	s	struct:vector_instruction_set
+binary_op	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,sub_tag> { T2 operator()(T2 a, T2 b) { return _mm256_sub_ps(a, b); } };$/;"	s	struct:vector_instruction_set
+binary_op	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,sub_tag> { T2 operator()(T2 a, T2 b) { return _mm_sub_pd(a, b); } };$/;"	s	struct:vector_instruction_set
+binary_op	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,sub_tag> { T2 operator()(T2 a, T2 b) { return _mm_sub_ps(a, b); } };$/;"	s	struct:vector_instruction_set
+binary_op	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,sub_tag> { T2 operator()(T2 a, T2 b) { return a-b; } };$/;"	s	struct:scalar_instruction_set
+child	arrr.hpp	/^        array_eval_t<T1,U,model> child;$/;"	m	struct:arrr::array_eval_t
+const_iterator	arrr.hpp	/^        typedef const T* const_iterator;$/;"	t	class:arrr::arithmetic_array
+const_pointer	arrr.hpp	/^        typedef const T* const_pointer;$/;"	t	class:arrr::arithmetic_array
+const_reference	arrr.hpp	/^        typedef const T& const_reference;$/;"	t	class:arrr::arithmetic_array
+constify	arrr.hpp	/^    constexpr T constify(T value) {$/;"	f	namespace:arrr
+count	arrr.hpp	/^    struct count {$/;"	s	namespace:arrr
+count	arrr.hpp	/^    struct count<const arithmetic_array<T,N>&> {$/;"	s	namespace:arrr
+count	arrr.hpp	/^    struct count<std::tuple<store_tag, T1, T2>> {$/;"	s	namespace:arrr
+count	arrr.hpp	/^    struct count<std::tuple<tag, T1, T2>> {$/;"	s	namespace:arrr
+count	arrr.hpp	/^    struct count<std::tuple<tag, T1>> {$/;"	s	namespace:arrr
+data	arrr.hpp	/^        const_pointer data() const { return data_.get(); }$/;"	f	class:arrr::arithmetic_array
+data	arrr.hpp	/^        const_pointer data() const { return data_; }$/;"	f	class:arrr::arithmetic_array
+data	arrr.hpp	/^        pointer data() { return data_.get(); }$/;"	f	class:arrr::arithmetic_array
+data	arrr.hpp	/^        pointer data() { return data_; }$/;"	f	class:arrr::arithmetic_array
+data_	arrr.hpp	/^        ARRR_ALIGN(vector_model::alignment) value_type data_[size_];$/;"	m	class:arrr::arithmetic_array
+data_	arrr.hpp	/^        std::unique_ptr<value_type[],void(*)(void*)> data_;$/;"	m	class:arrr::arithmetic_array
+difference_type	arrr.hpp	/^        typedef std::ptrdiff_t difference_type;$/;"	t	class:arrr::arithmetic_array
+end	arrr.hpp	/^        const_iterator end() const { return data_+size_; }$/;"	f	class:arrr::arithmetic_array
+end	arrr.hpp	/^        const_iterator end() const { return data_.get()+size_; }$/;"	f	class:arrr::arithmetic_array
+end	arrr.hpp	/^        iterator end() { return data_+size_; }$/;"	f	class:arrr::arithmetic_array
+end	arrr.hpp	/^        iterator end() { return data_.get()+size_; }$/;"	f	class:arrr::arithmetic_array
+execute	arrr.hpp	/^    typename std::enable_if<is_node<T1>::value, void>::type execute(T1 expr, size_t N) {$/;"	f	namespace:arrr
+execute	loops.hpp	/^    static void execute(T1 expr) {$/;"	f	struct:shortloop
+execute	loops.hpp	/^    static void execute(T1 expr, const size_t N) {$/;"	f	struct:loop
+immediates	arrr.hpp	/^        static const int immediates = 0;$/;"	m	struct:arrr::count
+immediates	arrr.hpp	/^        static const int immediates = 1;$/;"	m	struct:arrr::count
+immediates	arrr.hpp	/^        static const int immediates = count<T1>::immediates+count<T2>::immediates;$/;"	m	struct:arrr::count
+immediates	arrr.hpp	/^        static const int immediates = count<T1>::immediates;$/;"	m	struct:arrr::count
+immediates	arrr.hpp	/^        static const int immediates = count<T2>::immediates;$/;"	m	struct:arrr::count
+is_node	arrr.hpp	/^    struct is_node {$/;"	s	namespace:arrr
+is_node	arrr.hpp	/^    struct is_node<arithmetic_array<T1, N>> {$/;"	s	namespace:arrr
+is_node	arrr.hpp	/^    struct is_node<std::tuple<store_tag, T1, T2>> {$/;"	s	namespace:arrr
+iterator	arrr.hpp	/^        typedef T* iterator;$/;"	t	class:arrr::arithmetic_array
+left	arrr.hpp	/^        array_eval_t<T1,U,model> left;$/;"	m	struct:arrr::array_eval_t
+load	arrr.hpp	/^        void load(const T &, const U&) { }$/;"	f	struct:arrr::array_eval_t
+load	arrr.hpp	/^        void load(const arithmetic_array<T1,N>&, const U &userdata) { tmp = model::load(ptr, userdata); }$/;"	f	struct:arrr::array_eval_t
+load	arrr.hpp	/^        void load(const std::tuple<store_tag, T1, T2> &node, const U& userdata) {$/;"	f	struct:arrr::array_eval_t
+load	arrr.hpp	/^        void load(const std::tuple<tag, T1, T2> &node, const U& userdata) {$/;"	f	struct:arrr::array_eval_t
+load	arrr.hpp	/^        void load(const std::tuple<tag, T1> &node, const U& userdata) {$/;"	f	struct:arrr::array_eval_t
+load	instruction_sets.hpp	/^    static pack_type load(const value_type *ptr, size_t index) { return _mm256_load_pd(ptr+index); }$/;"	f	struct:vector_instruction_set
+load	instruction_sets.hpp	/^    static pack_type load(const value_type *ptr, size_t index) { return _mm256_load_ps(ptr+index); }$/;"	f	struct:vector_instruction_set
+load	instruction_sets.hpp	/^    static pack_type load(const value_type *ptr, size_t index) { return _mm_load_pd(ptr+index); }$/;"	f	struct:vector_instruction_set
+load	instruction_sets.hpp	/^    static pack_type load(const value_type *ptr, size_t index) { return _mm_load_ps(ptr+index); }$/;"	f	struct:vector_instruction_set
+load	instruction_sets.hpp	/^    static pack_type load(const value_type *ptr, size_t index) { return ptr[index]; }$/;"	f	struct:scalar_instruction_set
+loads	arrr.hpp	/^        static const int loads = 0;$/;"	m	struct:arrr::count
+loads	arrr.hpp	/^        static const int loads = 1;$/;"	m	struct:arrr::count
+loads	arrr.hpp	/^        static const int loads = count<T1>::loads+count<T2>::loads;$/;"	m	struct:arrr::count
+loads	arrr.hpp	/^        static const int loads = count<T1>::loads;$/;"	m	struct:arrr::count
+loads	arrr.hpp	/^        static const int loads = count<T2>::loads;$/;"	m	struct:arrr::count
+loop	loops.hpp	/^struct loop {$/;"	s
+operations	arrr.hpp	/^        static const int operations = 0;$/;"	m	struct:arrr::count
+operations	arrr.hpp	/^        static const int operations = count<T1>::operations+1;$/;"	m	struct:arrr::count
+operations	arrr.hpp	/^        static const int operations = count<T1>::operations+count<T2>::operations+1;$/;"	m	struct:arrr::count
+operations	arrr.hpp	/^        static const int operations = count<T2>::operations;$/;"	m	struct:arrr::count
+operator ()	arrr.hpp	/^        return_type operator()(const T&, const U&) {$/;"	f	struct:arrr::array_eval_t
+operator ()	arrr.hpp	/^        return_type operator()(const arithmetic_array<T1,N> &, const U &) {$/;"	f	struct:arrr::array_eval_t
+operator ()	arrr.hpp	/^        return_type operator()(const std::tuple<store_tag, T1, T2> &node, const U& userdata) {$/;"	f	struct:arrr::array_eval_t
+operator ()	arrr.hpp	/^        return_type operator()(const std::tuple<tag, T1, T2> &node, const U& userdata) {$/;"	f	struct:arrr::array_eval_t
+operator ()	arrr.hpp	/^        return_type operator()(const std::tuple<tag, T1> &node, const U& userdata) {$/;"	f	struct:arrr::array_eval_t
+operator ()	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,add_tag> { T2 operator()(T2 a, T2 b) { return _mm256_add_pd(a, b); } };$/;"	f	struct:vector_instruction_set::binary_op
+operator ()	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,add_tag> { T2 operator()(T2 a, T2 b) { return _mm256_add_ps(a, b); } };$/;"	f	struct:vector_instruction_set::binary_op
+operator ()	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,add_tag> { T2 operator()(T2 a, T2 b) { return _mm_add_pd(a, b); } };$/;"	f	struct:vector_instruction_set::binary_op
+operator ()	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,add_tag> { T2 operator()(T2 a, T2 b) { return _mm_add_ps(a, b); } };$/;"	f	struct:vector_instruction_set::binary_op
+operator ()	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,add_tag> { T2 operator()(T2 a, T2 b) { return a+b; } };$/;"	f	struct:scalar_instruction_set::binary_op
+operator ()	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,div_tag> { T2 operator()(T2 a, T2 b) { return _mm256_div_pd(a, b); } };$/;"	f	struct:vector_instruction_set::binary_op
+operator ()	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,div_tag> { T2 operator()(T2 a, T2 b) { return _mm256_div_ps(a, b); } };$/;"	f	struct:vector_instruction_set::binary_op
+operator ()	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,div_tag> { T2 operator()(T2 a, T2 b) { return _mm_div_pd(a, b); } };$/;"	f	struct:vector_instruction_set::binary_op
+operator ()	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,div_tag> { T2 operator()(T2 a, T2 b) { return _mm_div_ps(a, b); } };$/;"	f	struct:vector_instruction_set::binary_op
+operator ()	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,div_tag> { T2 operator()(T2 a, T2 b) { return a\/b; } };$/;"	f	struct:scalar_instruction_set::binary_op
+operator ()	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,max_tag> { T2 operator()(T2 a, T2 b) { return _mm256_max_pd(a, b); } };$/;"	f	struct:vector_instruction_set::binary_op
+operator ()	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,max_tag> { T2 operator()(T2 a, T2 b) { return _mm256_max_ps(a, b); } };$/;"	f	struct:vector_instruction_set::binary_op
+operator ()	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,max_tag> { T2 operator()(T2 a, T2 b) { return _mm_max_pd(a, b); } };$/;"	f	struct:vector_instruction_set::binary_op
+operator ()	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,max_tag> { T2 operator()(T2 a, T2 b) { return _mm_max_ps(a, b); } };$/;"	f	struct:vector_instruction_set::binary_op
+operator ()	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,max_tag> { T2 operator()(T2 a, T2 b) { return a>b?a:b; } };$/;"	f	struct:scalar_instruction_set::binary_op
+operator ()	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,min_tag> { T2 operator()(T2 a, T2 b) { return _mm256_min_pd(a, b); } };$/;"	f	struct:vector_instruction_set::binary_op
+operator ()	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,min_tag> { T2 operator()(T2 a, T2 b) { return _mm256_min_ps(a, b); } };$/;"	f	struct:vector_instruction_set::binary_op
+operator ()	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,min_tag> { T2 operator()(T2 a, T2 b) { return _mm_min_pd(a, b); } };$/;"	f	struct:vector_instruction_set::binary_op
+operator ()	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,min_tag> { T2 operator()(T2 a, T2 b) { return _mm_min_ps(a, b); } };$/;"	f	struct:vector_instruction_set::binary_op
+operator ()	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,min_tag> { T2 operator()(T2 a, T2 b) { return a<b?a:b; } };$/;"	f	struct:scalar_instruction_set::binary_op
+operator ()	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,mul_tag> { T2 operator()(T2 a, T2 b) { return _mm256_mul_pd(a, b); } };$/;"	f	struct:vector_instruction_set::binary_op
+operator ()	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,mul_tag> { T2 operator()(T2 a, T2 b) { return _mm256_mul_ps(a, b); } };$/;"	f	struct:vector_instruction_set::binary_op
+operator ()	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,mul_tag> { T2 operator()(T2 a, T2 b) { return _mm_mul_pd(a, b); } };$/;"	f	struct:vector_instruction_set::binary_op
+operator ()	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,mul_tag> { T2 operator()(T2 a, T2 b) { return _mm_mul_ps(a, b); } };$/;"	f	struct:vector_instruction_set::binary_op
+operator ()	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,mul_tag> { T2 operator()(T2 a, T2 b) { return a*b; } };$/;"	f	struct:scalar_instruction_set::binary_op
+operator ()	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,sub_tag> { T2 operator()(T2 a, T2 b) { return _mm256_sub_pd(a, b); } };$/;"	f	struct:vector_instruction_set::binary_op
+operator ()	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,sub_tag> { T2 operator()(T2 a, T2 b) { return _mm256_sub_ps(a, b); } };$/;"	f	struct:vector_instruction_set::binary_op
+operator ()	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,sub_tag> { T2 operator()(T2 a, T2 b) { return _mm_sub_pd(a, b); } };$/;"	f	struct:vector_instruction_set::binary_op
+operator ()	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,sub_tag> { T2 operator()(T2 a, T2 b) { return _mm_sub_ps(a, b); } };$/;"	f	struct:vector_instruction_set::binary_op
+operator ()	instruction_sets.hpp	/^    template<typename T2> struct binary_op<T2,sub_tag> { T2 operator()(T2 a, T2 b) { return a-b; } };$/;"	f	struct:scalar_instruction_set::binary_op
+operator ()	instruction_sets.hpp	/^    template<typename T2> struct unary_op<T2,rcp_tag> { T2 operator()(T2 a) { return _mm256_rcp_pd(a); } };$/;"	f	struct:vector_instruction_set::unary_op
+operator ()	instruction_sets.hpp	/^    template<typename T2> struct unary_op<T2,rcp_tag> { T2 operator()(T2 a) { return _mm256_rcp_ps(a); } };$/;"	f	struct:vector_instruction_set::unary_op
+operator ()	instruction_sets.hpp	/^    template<typename T2> struct unary_op<T2,rcp_tag> { T2 operator()(T2 a) { return _mm_rcp_pd(a); } };$/;"	f	struct:vector_instruction_set::unary_op
+operator ()	instruction_sets.hpp	/^    template<typename T2> struct unary_op<T2,rcp_tag> { T2 operator()(T2 a) { return _mm_rcp_ps(a); } };$/;"	f	struct:vector_instruction_set::unary_op
+operator ()	instruction_sets.hpp	/^    template<typename T2> struct unary_op<T2,rcp_tag> { T2 operator()(T2 a) { return value_type(1)\/a; } };$/;"	f	struct:scalar_instruction_set::unary_op
+operator ()	instruction_sets.hpp	/^    template<typename T2> struct unary_op<T2,rsqrt_tag> { T2 operator()(T2 a) { return _mm256_rsqrt_pd(a); } };$/;"	f	struct:vector_instruction_set::unary_op
+operator ()	instruction_sets.hpp	/^    template<typename T2> struct unary_op<T2,rsqrt_tag> { T2 operator()(T2 a) { return _mm256_rsqrt_ps(a); } };$/;"	f	struct:vector_instruction_set::unary_op
+operator ()	instruction_sets.hpp	/^    template<typename T2> struct unary_op<T2,rsqrt_tag> { T2 operator()(T2 a) { return _mm_rsqrt_pd(a); } };$/;"	f	struct:vector_instruction_set::unary_op
+operator ()	instruction_sets.hpp	/^    template<typename T2> struct unary_op<T2,rsqrt_tag> { T2 operator()(T2 a) { return _mm_rsqrt_ps(a); } };$/;"	f	struct:vector_instruction_set::unary_op
+operator ()	instruction_sets.hpp	/^    template<typename T2> struct unary_op<T2,rsqrt_tag> { T2 operator()(T2 a) { return value_type(1)\/std::sqrt(a); } };$/;"	f	struct:scalar_instruction_set::unary_op
+operator ()	instruction_sets.hpp	/^    template<typename T2> struct unary_op<T2,sqrt_tag> { T2 operator()(T2 a) { return _mm256_sqrt_pd(a); } };$/;"	f	struct:vector_instruction_set::unary_op
+operator ()	instruction_sets.hpp	/^    template<typename T2> struct unary_op<T2,sqrt_tag> { T2 operator()(T2 a) { return _mm256_sqrt_ps(a); } };$/;"	f	struct:vector_instruction_set::unary_op
+operator ()	instruction_sets.hpp	/^    template<typename T2> struct unary_op<T2,sqrt_tag> { T2 operator()(T2 a) { return _mm_sqrt_pd(a); } };$/;"	f	struct:vector_instruction_set::unary_op
+operator ()	instruction_sets.hpp	/^    template<typename T2> struct unary_op<T2,sqrt_tag> { T2 operator()(T2 a) { return _mm_sqrt_ps(a); } };$/;"	f	struct:vector_instruction_set::unary_op
+operator ()	instruction_sets.hpp	/^    template<typename T2> struct unary_op<T2,sqrt_tag> { T2 operator()(T2 a) { return std::sqrt(a); } };$/;"	f	struct:scalar_instruction_set::unary_op
+operator *=	arrr.hpp	/^        arithmetic_array& operator*=(const T1 &rhs) {$/;"	f	class:arrr::arithmetic_array
+operator +=	arrr.hpp	/^        arithmetic_array& operator+=(const T1 &rhs) {$/;"	f	class:arrr::arithmetic_array
+operator -=	arrr.hpp	/^        arithmetic_array& operator-=(const T1 &rhs) {$/;"	f	class:arrr::arithmetic_array
+operator /=	arrr.hpp	/^        arithmetic_array& operator\/=(const T1 &rhs) {$/;"	f	class:arrr::arithmetic_array
+operator =	arrr.hpp	/^        arithmetic_array& operator=(const T1 &rhs) {$/;"	f	class:arrr::arithmetic_array
+operator =	arrr.hpp	/^        arithmetic_array& operator=(const arithmetic_array &rhs) {$/;"	f	class:arrr::arithmetic_array
+operator []	arrr.hpp	/^        const_reference operator[](size_type i) const { return data_[i]; }$/;"	f	class:arrr::arithmetic_array
+operator []	arrr.hpp	/^        reference operator[](size_type i) { return data_[i]; }$/;"	f	class:arrr::arithmetic_array
+pack_size	instruction_sets.hpp	/^    static const size_t pack_size = 1;$/;"	m	struct:scalar_instruction_set
+pack_size	instruction_sets.hpp	/^    static const size_t pack_size = 2;$/;"	m	struct:vector_instruction_set
+pack_size	instruction_sets.hpp	/^    static const size_t pack_size = 4;$/;"	m	struct:vector_instruction_set
+pack_size	instruction_sets.hpp	/^    static const size_t pack_size = 8;$/;"	m	struct:vector_instruction_set
+pack_type	instruction_sets.hpp	/^    typedef T pack_type;$/;"	t	struct:scalar_instruction_set
+pack_type	instruction_sets.hpp	/^    typedef __m128 pack_type;$/;"	t	struct:vector_instruction_set
+pack_type	instruction_sets.hpp	/^    typedef __m128d pack_type;$/;"	t	struct:vector_instruction_set
+pack_type	instruction_sets.hpp	/^    typedef __m256 pack_type;$/;"	t	struct:vector_instruction_set
+pack_type	instruction_sets.hpp	/^    typedef __m256d pack_type;$/;"	t	struct:vector_instruction_set
+pointer	arrr.hpp	/^        typedef T* pointer;$/;"	t	class:arrr::arithmetic_array
+prepare	arrr.hpp	/^        void prepare(const T &node) { tmp = model::set(node); }$/;"	f	struct:arrr::array_eval_t
+prepare	arrr.hpp	/^        void prepare(const arithmetic_array<T1,N> &node) { ptr = node.data(); }$/;"	f	struct:arrr::array_eval_t
+prepare	arrr.hpp	/^        void prepare(const std::tuple<store_tag, T1, T2> &node) {$/;"	f	struct:arrr::array_eval_t
+prepare	arrr.hpp	/^        void prepare(const std::tuple<tag, T1, T2> &node) {$/;"	f	struct:arrr::array_eval_t
+prepare	arrr.hpp	/^        void prepare(const std::tuple<tag, T1> &node) {$/;"	f	struct:arrr::array_eval_t
+ptr	arrr.hpp	/^        T1 ptr;$/;"	m	struct:arrr::array_eval_t
+ptr	arrr.hpp	/^        typename arithmetic_array<T1,N>::const_pointer ptr;$/;"	m	struct:arrr::array_eval_t
+reference	arrr.hpp	/^        typedef T& reference;$/;"	t	class:arrr::arithmetic_array
+registers	instruction_sets.hpp	/^    static const size_t registers = 16;$/;"	m	struct:vector_instruction_set
+registers	instruction_sets.hpp	/^    static const size_t registers = 8;$/;"	m	struct:scalar_instruction_set
+registers	instruction_sets.hpp	/^    static const size_t registers = 8;$/;"	m	struct:vector_instruction_set
+return_type	arrr.hpp	/^        typedef typename model::pack_type return_type;$/;"	t	struct:arrr::array_eval_t
+right	arrr.hpp	/^        array_eval_t<T2,U,model> right;$/;"	m	struct:arrr::array_eval_t
+scalar_instruction_set	instruction_sets.hpp	/^struct scalar_instruction_set {$/;"	s
+scalar_model	arrr.hpp	/^        typedef scalar_instruction_set<T> scalar_model;$/;"	t	class:arrr::arithmetic_array
+set	instruction_sets.hpp	/^    static pack_type set(T2 value) { return _mm256_set1_pd(value); }$/;"	f	struct:vector_instruction_set
+set	instruction_sets.hpp	/^    static pack_type set(T2 value) { return _mm256_set1_ps(value); }$/;"	f	struct:vector_instruction_set
+set	instruction_sets.hpp	/^    static pack_type set(T2 value) { return _mm_set1_pd(value); }$/;"	f	struct:vector_instruction_set
+set	instruction_sets.hpp	/^    static pack_type set(T2 value) { return _mm_set1_ps(value); }$/;"	f	struct:vector_instruction_set
+set	instruction_sets.hpp	/^    static pack_type set(T2 value) { return value; }$/;"	f	struct:scalar_instruction_set
+shortloop	loops.hpp	/^struct shortloop {$/;"	s
+size	arrr.hpp	/^        size_type size() const { return size_; }$/;"	f	class:arrr::arithmetic_array
+size_	arrr.hpp	/^        const size_type size_;$/;"	m	class:arrr::arithmetic_array
+size_type	arrr.hpp	/^        typedef std::size_t size_type;$/;"	t	class:arrr::arithmetic_array
+static_execute	arrr.hpp	/^    typename std::enable_if<is_node<T1>::value, void>::type static_execute(T1 expr) {$/;"	f	namespace:arrr
+store	arrr.hpp	/^        void store(const T &, const U&) { }$/;"	f	struct:arrr::array_eval_t
+store	arrr.hpp	/^        void store(const arithmetic_array<T1,N> &, const U &) { }$/;"	f	struct:arrr::array_eval_t
+store	arrr.hpp	/^        void store(const std::tuple<store_tag, T1, T2> &node, const U& userdata) {$/;"	f	struct:arrr::array_eval_t
+store	arrr.hpp	/^        void store(const std::tuple<tag, T1, T2> &node, const U& userdata) {$/;"	f	struct:arrr::array_eval_t
+store	arrr.hpp	/^        void store(const std::tuple<tag, T1> &node, const U& userdata) {$/;"	f	struct:arrr::array_eval_t
+store	arrr.hpp	/^    store(const T1 &a, const T2 &b) {$/;"	f	namespace:arrr
+store	instruction_sets.hpp	/^    static pack_type store(value_type *ptr, size_t index, pack_type val) { _mm256_store_pd(ptr+index, val); return val; }$/;"	f	struct:vector_instruction_set
+store	instruction_sets.hpp	/^    static pack_type store(value_type *ptr, size_t index, pack_type val) { _mm256_store_ps(ptr+index, val); return val; }$/;"	f	struct:vector_instruction_set
+store	instruction_sets.hpp	/^    static pack_type store(value_type *ptr, size_t index, pack_type val) { _mm_store_pd(ptr+index, val); return val; }$/;"	f	struct:vector_instruction_set
+store	instruction_sets.hpp	/^    static pack_type store(value_type *ptr, size_t index, pack_type val) { _mm_store_ps(ptr+index, val); return val; }$/;"	f	struct:vector_instruction_set
+store	instruction_sets.hpp	/^    static pack_type store(value_type *ptr, size_t index, pack_type val) { ptr[index] = val; return val; }$/;"	f	struct:scalar_instruction_set
+store_tag	arrr.hpp	/^    struct store_tag { };$/;"	s	namespace:arrr
+store_type	arrr.hpp	/^    struct store_type {$/;"	s	namespace:arrr
+stores	arrr.hpp	/^        static const int stores = 0;$/;"	m	struct:arrr::count
+stores	arrr.hpp	/^        static const int stores = count<T1>::stores+count<T2>::stores;$/;"	m	struct:arrr::count
+stores	arrr.hpp	/^        static const int stores = count<T1>::stores;$/;"	m	struct:arrr::count
+stores	arrr.hpp	/^        static const int stores = count<T2>::stores + 1;$/;"	m	struct:arrr::count
+stream	instruction_sets.hpp	/^    static pack_type stream(value_type *ptr, size_t index, pack_type val) { _mm256_stream_pd(ptr+index, val); return val; }$/;"	f	struct:vector_instruction_set
+stream	instruction_sets.hpp	/^    static pack_type stream(value_type *ptr, size_t index, pack_type val) { _mm256_stream_ps(ptr+index, val); return val; }$/;"	f	struct:vector_instruction_set
+stream	instruction_sets.hpp	/^    static pack_type stream(value_type *ptr, size_t index, pack_type val) { _mm_stream_pd(ptr+index, val); return val; }$/;"	f	struct:vector_instruction_set
+stream	instruction_sets.hpp	/^    static pack_type stream(value_type *ptr, size_t index, pack_type val) { _mm_stream_ps(ptr+index, val); return val; }$/;"	f	struct:vector_instruction_set
+stream	instruction_sets.hpp	/^    static pack_type stream(value_type *ptr, size_t index, pack_type val) { ptr[index] = val; return val; }$/;"	f	struct:scalar_instruction_set
+swap	arrr.hpp	/^        void swap(arithmetic_array &other) { data_.swap(other.data_); std::swap(size_, other.size_); }$/;"	f	class:arrr::arithmetic_array
+tmp	arrr.hpp	/^        return_type tmp;$/;"	m	struct:arrr::array_eval_t
+type	arrr.hpp	/^        >::type type;$/;"	t	struct:arrr::store_type
+unary	instruction_sets.hpp	/^    static pack_type unary(pack_type a) { return unary_op<pack_type,tag>()(a); }$/;"	f	struct:scalar_instruction_set
+unary	instruction_sets.hpp	/^    static pack_type unary(pack_type a) { return unary_op<pack_type,tag>()(a); }$/;"	f	struct:vector_instruction_set
+unary_op	instruction_sets.hpp	/^    template<typename T2, typename tag> struct unary_op { };$/;"	s	struct:scalar_instruction_set
+unary_op	instruction_sets.hpp	/^    template<typename T2, typename tag> struct unary_op { };$/;"	s	struct:vector_instruction_set
+unary_op	instruction_sets.hpp	/^    template<typename T2> struct unary_op<T2,rcp_tag> { T2 operator()(T2 a) { return _mm256_rcp_pd(a); } };$/;"	s	struct:vector_instruction_set
+unary_op	instruction_sets.hpp	/^    template<typename T2> struct unary_op<T2,rcp_tag> { T2 operator()(T2 a) { return _mm256_rcp_ps(a); } };$/;"	s	struct:vector_instruction_set
+unary_op	instruction_sets.hpp	/^    template<typename T2> struct unary_op<T2,rcp_tag> { T2 operator()(T2 a) { return _mm_rcp_pd(a); } };$/;"	s	struct:vector_instruction_set
+unary_op	instruction_sets.hpp	/^    template<typename T2> struct unary_op<T2,rcp_tag> { T2 operator()(T2 a) { return _mm_rcp_ps(a); } };$/;"	s	struct:vector_instruction_set
+unary_op	instruction_sets.hpp	/^    template<typename T2> struct unary_op<T2,rcp_tag> { T2 operator()(T2 a) { return value_type(1)\/a; } };$/;"	s	struct:scalar_instruction_set
+unary_op	instruction_sets.hpp	/^    template<typename T2> struct unary_op<T2,rsqrt_tag> { T2 operator()(T2 a) { return _mm256_rsqrt_pd(a); } };$/;"	s	struct:vector_instruction_set
+unary_op	instruction_sets.hpp	/^    template<typename T2> struct unary_op<T2,rsqrt_tag> { T2 operator()(T2 a) { return _mm256_rsqrt_ps(a); } };$/;"	s	struct:vector_instruction_set
+unary_op	instruction_sets.hpp	/^    template<typename T2> struct unary_op<T2,rsqrt_tag> { T2 operator()(T2 a) { return _mm_rsqrt_pd(a); } };$/;"	s	struct:vector_instruction_set
+unary_op	instruction_sets.hpp	/^    template<typename T2> struct unary_op<T2,rsqrt_tag> { T2 operator()(T2 a) { return _mm_rsqrt_ps(a); } };$/;"	s	struct:vector_instruction_set
+unary_op	instruction_sets.hpp	/^    template<typename T2> struct unary_op<T2,rsqrt_tag> { T2 operator()(T2 a) { return value_type(1)\/std::sqrt(a); } };$/;"	s	struct:scalar_instruction_set
+unary_op	instruction_sets.hpp	/^    template<typename T2> struct unary_op<T2,sqrt_tag> { T2 operator()(T2 a) { return _mm256_sqrt_pd(a); } };$/;"	s	struct:vector_instruction_set
+unary_op	instruction_sets.hpp	/^    template<typename T2> struct unary_op<T2,sqrt_tag> { T2 operator()(T2 a) { return _mm256_sqrt_ps(a); } };$/;"	s	struct:vector_instruction_set
+unary_op	instruction_sets.hpp	/^    template<typename T2> struct unary_op<T2,sqrt_tag> { T2 operator()(T2 a) { return _mm_sqrt_pd(a); } };$/;"	s	struct:vector_instruction_set
+unary_op	instruction_sets.hpp	/^    template<typename T2> struct unary_op<T2,sqrt_tag> { T2 operator()(T2 a) { return _mm_sqrt_ps(a); } };$/;"	s	struct:vector_instruction_set
+unary_op	instruction_sets.hpp	/^    template<typename T2> struct unary_op<T2,sqrt_tag> { T2 operator()(T2 a) { return std::sqrt(a); } };$/;"	s	struct:scalar_instruction_set
+value	arrr.hpp	/^        static const bool value = false;$/;"	m	struct:arrr::is_node
+value	arrr.hpp	/^        static const bool value = true;$/;"	m	struct:arrr::is_node
+value_type	arrr.hpp	/^        typedef T value_type;$/;"	t	class:arrr::arithmetic_array
+value_type	instruction_sets.hpp	/^    typedef T value_type;$/;"	t	struct:scalar_instruction_set
+value_type	instruction_sets.hpp	/^    typedef double value_type;$/;"	t	struct:vector_instruction_set
+value_type	instruction_sets.hpp	/^    typedef float value_type;$/;"	t	struct:vector_instruction_set
+vector_instruction_set	instruction_sets.hpp	/^struct vector_instruction_set : public scalar_instruction_set<T> { };$/;"	s
+vector_instruction_set	instruction_sets.hpp	/^struct vector_instruction_set<double> {$/;"	s
+vector_instruction_set	instruction_sets.hpp	/^struct vector_instruction_set<float> {$/;"	s
+vector_model	arrr.hpp	/^        typedef vector_instruction_set<T> vector_model;$/;"	t	class:arrr::arithmetic_array
