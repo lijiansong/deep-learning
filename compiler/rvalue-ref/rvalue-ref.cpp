@@ -6,7 +6,11 @@
 #include <iostream>
 #include <vector>
 
-size_t copy_times = 0;
+#define LOG()                                                                  \
+  {                                                                            \
+    std::cout << __PRETTY_FUNCTION__ << "in file " << __FILE__ << ":"          \
+              << __LINE__ << std::endl;                                        \
+  }
 
 class MyString {
 private:
@@ -14,7 +18,6 @@ private:
   size_t m_len;
 
   void copy_data(const char *s) {
-    std::cout << "------copy data: " << ++copy_times << std::endl;
     m_data = new char[m_len + 1];
     memcpy(m_data, s, m_len);
     m_data[m_len] = '\0';
@@ -56,6 +59,10 @@ public:
     return *this;
   }
 
+  void show() {
+    std::cout << this->m_data << std::endl;
+  }
+
   virtual ~MyString() {
     if (m_data != NULL) {
       delete[] m_data;
@@ -63,12 +70,22 @@ public:
   }
 };
 
-int main(void) {
-  MyString a;
-  a = MyString("Hello");
+MyString load(const char*p) {
+  MyString tmp = MyString(p);
+  return tmp;
+}
 
-  std::vector<MyString> vec;
-  vec.push_back(MyString("World"));
+int main(void) {
+  const char *p = "hello";
+  MyString foo = load(p);
+  foo.show();
+  MyString foo1 = std::move(foo);
+
+  //MyString a;
+  //a = MyString("Hello");
+
+  //std::vector<MyString> vec;
+  //vec.push_back(MyString("World"));
 
   return 0;
 }
